@@ -1,0 +1,707 @@
+{
+    "hero": {
+        "tagline": "2026 AI 거버넌스 오케스트레이터 솔루션",
+        "title_1": "AI의 신뢰성,",
+        "title_2": "데이터로 증명",
+        "title_3": "하십시오.",
+        "description": "단순한 체크리스트를 넘어 AI 모델의 생애주기 전반을 데이터 기반으로 감시하는 'AI Governance Orchestrator'를 통해 규제 대응과 기술적 안전성을 동시에 확보하십시오.",
+        "cta_demo": "데모 시작하기",
+        "cta_download": "솔루션 소개서 다운로드"
+    },
+    "architecture": {
+        "title": "3-Layer Integrated Architecture",
+        "description": "기획부터 운영까지, 빈틈없는 위험 관리 체계를 제안합니다.",
+        "governance": {
+            "title": "Governance Layer",
+            "desc": "법령(AI기본법, 소보법 등) DB를 기반으로 기획 단계의 적합성을 선제적으로 판단합니다.",
+            "features": [
+                "법령 준수 자동 매핑",
+                "고영향 AI 판별",
+                "Compliance 가이드"
+            ]
+        },
+        "technical": {
+            "title": "Technical Validation",
+            "desc": "데이터와 모델을 직접 분석하여 편향성, 보안성(레드티밍), 설명 가능성을 측정합니다.",
+            "features": [
+                "Data Bias Map",
+                "Red Teaming Log",
+                "XAI Heatmap"
+            ]
+        },
+        "monitoring": {
+            "title": "Monitoring Layer",
+            "desc": "운영 중인 모델의 성능 저하(Drift)와 이상 징후를 실시간으로 탐지하여 사고를 예방합니다.",
+            "features": [
+                "Real-time Drift Detection",
+                "Incident Escalation",
+                "자동 긴급 정지"
+            ]
+        }
+    },
+    "command_center": {
+        "title": "실시간 위험 커맨드 센터",
+        "description": "전사 AI 서비스의 위험 상태를 한눈에 파악하십시오. 신호등 시스템(Green, Yellow, Red)을 통해 즉각적인 의사결정을 지원하며, 규제 대응 현황을 시각화하여 보고 업무를 자동화합니다.",
+        "active_services": "운영 중인 서비스",
+        "avg_risk_score": "평균 위험 지수",
+        "compliance_rate": "전사 규제 준수율"
+    },
+    "automation": {
+        "title": "지능형 자동화 기술",
+        "scanner": {
+            "title": "AI Scanners",
+            "desc": "소스코드와 데이터셋을 자동 스캔하여 개인식별정보(PII) 노출 및 보안 취약점을 탐지합니다."
+        },
+        "agent": {
+            "title": "sLLM Governance Agent",
+            "desc": "최신 판례와 가이드라인이 업데이트되면, 기존 서비스 정의서를 대조하여 위험 요소를 재평가합니다."
+        },
+        "escalation": {
+            "title": "Incident Escalation",
+            "desc": "모델 정확도 급락 혹은 유해 문구 생성 시 즉시 알림을 발송하고 필요시 서비스를 '긴급 정지'합니다."
+        },
+        "sllm": {
+            "title": "sLLM 자동화 시스템",
+            "desc": "소형 언어모델(sLLM)을 활용하여 AI 위험성 평가, 규제 준수 검증, 편향성 분석을 완전 자동화하고 온프레미스 환경에서 독립적으로 운영할 수 있습니다."
+        }
+    },
+    "cta_footer": {
+        "title": "지금 바로 AI 안전성을 확보하십시오.",
+        "description": "전문가 상담을 통해 귀사의 AI 서비스에 최적화된 거버넌스 프레임워크를 제안해 드립니다.",
+        "cta_sllm": "sLLM 자동화 시스템",
+        "cta_consult": "전문가와 상담하기",
+        "cta_trial": "무료 체험 신청",
+        "risk_card": {
+            "title": "신용평가 AI 모델 v2.0",
+            "desc": "금융 소비자 보호법 준수 및 편향성 검증 필요"
+        }
+    },
+    "units": {
+        "count": "개",
+        "pts": "pts"
+    },
+    "footer": {
+        "terms": "이용약관",
+        "privacy": "개인정보처리방침",
+        "support": "고객지원",
+        "copyright": "© 2026 AI Sentinel Corp. All rights reserved."
+    },
+    "cards": {
+        "services": "서비스",
+        "compliance_rate": "컴플라이언스 준수율",
+        "vs_last_month": "vs 지난 달",
+        "state": "상태",
+        "docs_complete": "증빙 문서 완비",
+        "review_needed": "개 항목 검토 필요",
+        "rate_rising": "준수율 상승 중",
+        "compliance_items_status": "{{mandatory}}개 필수 항목 중 {{completed}}개 이행 완료"
+    },
+    "charts": {
+        "risk_index": "위험 지수",
+        "safety_index": "안전 지수",
+        "bias": "편향도",
+        "accuracy": "정확도 (%)",
+        "drift": "모델 드리프트"
+    },
+    "assessment": {
+        "title": "AI 서비스 위험성 평가",
+        "description": "신규 AI 서비스 기획 단계에서 고영향 AI 여부를 판별하고 규제 준수 사항을 자동 생성합니다.",
+        "sllm_agent_active": "sLLM 거버넌스 에이전트 가동 중",
+        "metrics": {
+            "waiting": "평가 대기 서비스",
+            "high_impact_rate": "고영향 AI 판정률",
+            "avg_score": "평균 컴플라이언스 점수",
+            "updates_24h": "최근 24시간 업데이트"
+        },
+        "wizard": {
+            "title": "고영향 AI 판별 마법사",
+            "description": "서비스 목적과 데이터 성격을 기반으로 규제 등급을 자동 산출합니다."
+        },
+        "regulation_status": {
+            "title": "주요 규제 대응 현황",
+            "description": "글로벌 및 국내 AI 법령 준수율"
+        },
+        "guidelines": {
+            "title": "평가 가이드라인",
+            "items": [
+                "금융, 의료, 인사 채용 분야는 자동적으로 '고영향 AI'로 분류될 가능성이 높습니다.",
+                "EU AI Act 및 국내 AI기본법 초안에 근거한 알고리즘 투명성 확보가 필수적입니다.",
+                "평가 결과는 sLLM 에이전트에 의해 실시간 법령 DB와 대조됩니다."
+            ]
+        },
+        "result": {
+            "title": "위험성 판별 결과",
+            "high_risk": "고영향 AI (High Risk)",
+            "low_risk": "저위험 AI (Low Risk)",
+            "notice_title": "자동 생성된 소비자 고지 문구",
+            "notice_high": "본 서비스는 [{{serviceName}}]을(를) 위해 AI 기술을 활용합니다. 귀하의 데이터는 공정하게 처리되며, 자동화된 결정에 대해 이의를 제기할 권리가 있습니다.",
+            "notice_low": "본 서비스는 사용자 편의를 위해 보조적인 AI 기능을 포함하고 있습니다.",
+            "compliance_score": "컴플라이언스 점수",
+            "checklist_title": "필수 이행 Checklist",
+            "checklist_desc": "관련 법령 매핑을 통한 준수 필요 항목"
+        },
+        "checklist": {
+            "c1": "알고리즘 공정성 검토",
+            "c2": "개인정보 영향평가",
+            "c3": "이용자 고지 의무",
+            "c4": "인적 개입 절차 수립",
+            "status": {
+                "completed": "준수 완료",
+                "pending": "조치 필요",
+                "not_applicable": "해당 없음"
+            },
+            "law_basis": "근거"
+        },
+        "actions": {
+            "download_report": "PDF 리포트 다운로드",
+            "request_approval": "거버넌스 승인 요청"
+        }
+    },
+    "dashboard": {
+        "title": "Risk Command Center",
+        "description": "전사 AI 거버넌스 및 위험 관리 현황 (마지막 업데이트: 2026-01-30 23:31)",
+        "search_placeholder": "서비스 또는 법령 검색...",
+        "btn_report": "보고서 생성",
+        "metrics": {
+            "total_services": "전체 AI 서비스",
+            "high_risk_detected": "고위험군 탐지",
+            "avg_compliance": "평균 컴플라이언스",
+            "realtime_monitoring": "실시간 모니터링"
+        },
+        "risk_overview": {
+            "title": "전사 통합 위험 지수: 주의",
+            "description": "금융소비자 보호법 개정안 반영 및 고영향 AI 서비스의 기술 검증 보완이 필요합니다.",
+            "chart_title": "월별 위험 및 안전성 추이",
+            "chart_desc": "최근 6개월간의 리스크 탐지 및 거버넌스 준수율",
+            "live_update": "실시간 업데이트"
+        },
+        "bottleneck": {
+            "title": "단계별 리스크 평가 병목 구간",
+            "stages": {
+                "planning": "기획 (고영향 판별)",
+                "development": "개발 (기술 검증)",
+                "operation": "운영 (모니터링)",
+                "maintenance": "사후 관리 (재평가)"
+            },
+            "waiting_count": "{{count}}개 서비스 대기 중",
+            "note": "* 현재 '기술 검증' 단계에서 다수의 금융 AI 서비스가 데이터 편향성 테스트를 대기 중입니다."
+        },
+        "global_compliance": {
+            "title": "글로벌 규제 준수율 (Compliance)"
+        },
+        "high_risk_list": {
+            "title": "집중 관리 대상 (High Risk Services)",
+            "description": "위험도가 'HIGH' 이상이거나 긴급 정지된 서비스 목록입니다.",
+            "view_all": "전체 서비스 보기"
+        },
+        "banner": {
+            "feature_tag": "Feature: sLLM Governance Agent",
+            "title": "지능형 규제 대응 자동화",
+            "description": "최신 판례나 가이드라인이 업데이트되면, 기존 서비스 정의서와 대조하여 위험 요소를 자동으로 재평가합니다. 복잡한 컴플라이언스 관리를 AI가 직접 수행합니다.",
+            "btn_run": "에이전트 실행",
+            "btn_update": "업데이트 내역"
+        }
+    },
+    "monitoring": {
+        "title": "실시간 AI 모니터링",
+        "description": "운영 중인 AI 모델의 성능 저하(Drift)와 이상 징후를 실시간으로 탐지하고 제어합니다.",
+        "system_time": "현재 시스템 시각",
+        "metrics": {
+            "drift": "실시간 데이터 드리프트",
+            "unresolved_alerts": "미처리 위험 알림",
+            "latency": "평균 추론 지연 시간",
+            "uptime": "시스템 가동률"
+        },
+        "performance": {
+            "title": "성능 모니터링 (Performance & Drift)",
+            "subtitle": "최근 24시간 동안의 모델 정확도 및 드리프트 추이",
+            "live": "Live",
+            "integrated": "전체 서비스 통합"
+        },
+        "table": {
+            "title": "운영 서비스 상태 목록",
+            "search_placeholder": "서비스 검색...",
+            "headers": {
+                "service_name": "서비스명",
+                "status": "상태",
+                "accuracy": "정확도",
+                "risk_index": "위험 지수",
+                "action": "액션"
+            },
+            "status": {
+                "operating": "정상 운영",
+                "emergency_stop": "긴급 중지",
+                "evaluating": "평가 중"
+            },
+            "actions": {
+                "stop": "중지",
+                "restart": "재가동"
+            },
+            "toast_stop": "{{serviceName}} 서비스가 긴급 중지되었습니다.",
+            "toast_desc": "보안 취약점 및 성능 저하가 감지되어 시스템에 의해 차단되었습니다."
+        },
+        "alerts": {
+            "title": "긴급 보안 알림 (PII Leak)",
+            "pii_risk": "개인 식별 정보 노출 위험 감지",
+            "pii_desc": "[신용대출 심사 AI] 모델의 추론 로그에서 마스킹되지 않은 주민등록번호 패턴이 감지되었습니다.",
+            "btn_filter": "자동 필터링 활성",
+            "btn_detail": "상세 분석",
+            "perf_warning": "성능 저하 주의보",
+            "perf_desc": "[고객 상담 챗봇]의 할루시네이션(Hallucination) 지수가 임계치(0.15)를 초과하였습니다.",
+            "detected_at": "감지 시각",
+            "waiting_action": "조치 대기 중"
+        },
+        "incidents": {
+            "title": "최근 인시던트 로그",
+            "log_1": "대출 심사 모델 v2.4 배포가 성공적으로 완료되었습니다.",
+            "log_2": "인사 스크리닝 서비스 정기 점검이 완료되었습니다.",
+            "log_3": "배송 알고리즘 긴급 패치가 적용되었습니다.",
+            "log_default": "모델 버전 업데이트 완료",
+            "view_all": "전체 로그 보기",
+            "time_ago": "2시간 전"
+        }
+    },
+    "sllm_automation": {
+        "header": {
+            "badge": "sLLM 자동화 시스템",
+            "title_prefix": "AI 평가의",
+            "title_highlight": "완전 자동화",
+            "description": "소형 언어모델(sLLM)을 활용하여 AI 위험성 평가, 규제 준수 검증, 편향성 분석을 자동화하고 온프레미스 환경에서 독립적으로 운영할 수 있는 시스템을 구축하세요."
+        },
+        "tabs": {
+            "models": "sLLM 모델 관리",
+            "prompts": "프롬프트 엔지니어링",
+            "training": "파인튜닝",
+            "export": "온프레미스 배포"
+        },
+        "models": {
+            "available_title": "사용 가능한 sLLM 모델",
+            "size": "크기",
+            "accuracy": "정확도",
+            "updated": "업데이트",
+            "performance_title": "모델 성능 지표",
+            "total_accuracy": "전체 정확도",
+            "precision": "Precision",
+            "recall": "Recall",
+            "realtime_test_title": "실시간 평가 테스트",
+            "input_label": "테스트 입력 데이터",
+            "input_placeholder": "평가할 AI 시스템 정보를 입력하세요...",
+            "btn_evaluating": "sLLM 평가 중...",
+            "btn_evaluate": "sLLM 평가 실행",
+            "eval_complete": "평가 완료",
+            "eval_metrics": {
+                "accuracy": "정확도",
+                "precision": "정밀도",
+                "recall": "재현율",
+                "f1": "F1 점수",
+                "bias": "편향성 점수",
+                "compliance": "규제 준수율"
+            },
+            "automation_settings_title": "자동화 설정",
+            "auto_risk": "자동 위험성 평가",
+            "auto_risk_desc": "새로운 AI 시스템 등록 시 자동 평가",
+            "realtime_compliance": "실시간 규제 준수 검증",
+            "realtime_compliance_desc": "법규 변경 시 자동 재검증",
+            "auto_bias": "편향성 자동 탐지",
+            "auto_bias_desc": "데이터 업데이트 시 편향성 재분석"
+        },
+        "prompts": {
+            "library_title": "프롬프트 템플릿 라이브러리",
+            "optimizer_title": "프롬프트 최적화 도구",
+            "auto_complete": "변수 자동 완성",
+            "validation": "프롬프트 검증",
+            "btn_validate": "프롬프트 유효성 검사",
+            "editor_title": "프롬프트 편집기",
+            "editor_label": "프롬프트 내용",
+            "editor_placeholder": "프롬프트를 입력하거나 왼쪽에서 템플릿을 선택하세요...",
+            "btn_save": "저장",
+            "btn_test": "테스트",
+            "analysis_title": "프롬프트 성능 분석",
+            "clarity": "명확성",
+            "completeness": "완성도",
+            "efficiency": "효율성",
+            "suggestions_title": "개선 제안",
+            "suggestion_1": "더 구체적인 평가 기준 추가 권장",
+            "suggestion_2": "예시 케이스 포함으로 정확도 향상 가능",
+            "suggestion_3": "출력 형식 표준화로 일관성 개선"
+        },
+        "training": {
+            "settings_title": "파인튜닝 설정",
+            "base_model": "기본 모델 선택",
+            "base_model_placeholder": "기본 모델을 선택하세요",
+            "dataset_label": "학습 데이터셋",
+            "upload_instruction": "에너지 AI 평가 데이터셋을 업로드하세요",
+            "btn_select_file": "파일 선택",
+            "learning_rate": "학습률 (Learning Rate)",
+            "batch_size": "배치 크기 (Batch Size)",
+            "epochs": "에포크 수",
+            "validation_split": "검증 비율",
+            "quality_title": "학습 데이터 품질 분석",
+            "quality_good": "데이터셋 품질: 우수",
+            "total_samples": "총 샘플 수",
+            "label_accuracy": "라벨 정확도",
+            "balance": "데이터 균형도",
+            "deduplication": "중복 제거율",
+            "distribution_title": "카테고리별 분포",
+            "cat_risk": "위험성 평가",
+            "cat_compliance": "규제 준수",
+            "cat_bias": "편향성 분석",
+            "execution_title": "파인튜닝 실행",
+            "progress_title": "학습 진행 상황",
+            "status_idle": "대기 중",
+            "epoch_info": "현재 에포크",
+            "eta": "예상 완료 시간",
+            "gpu_usage": "GPU 사용률",
+            "btn_stop": "학습 중단",
+            "btn_start": "파인튜닝 시작",
+            "complete_title": "파인튜닝 완료",
+            "final_accuracy": "최종 정확도",
+            "val_loss": "검증 손실",
+            "training_time": "학습 시간",
+            "logs_title": "학습 로그",
+            "log_loading": "학습 데이터 로딩 완료",
+            "log_init": "모델 초기화 완료",
+            "log_epoch_start": "Epoch {{num}} 시작",
+            "log_epoch_end": "Epoch {{num}} 완료 - Validation Accuracy: {{acc}}%"
+        },
+        "export": {
+            "settings_title": "온프레미스 배포 설정",
+            "select_model_label": "배포할 모델 선택",
+            "select_model_placeholder": "모델을 선택하세요",
+            "env_label": "배포 환경",
+            "hw_optim_label": "하드웨어 최적화",
+            "compression_label": "모델 압축",
+            "quantization": "양자화 (INT8)",
+            "pruning": "프루닝 (가지치기)",
+            "distillation": "지식 증류",
+            "requirements_title": "시스템 요구사항",
+            "min_req_title": "최소 하드웨어 요구사항",
+            "storage": "저장공간",
+            "network": "네트워크",
+            "rec_req_title": "권장 사양",
+            "rec_ram": "RAM: 32GB 이상 (대용량 배치 처리)",
+            "rec_gpu": "GPU: RTX 4090 x2 (병렬 처리)",
+            "rec_ssd": "SSD: NVMe 500GB (빠른 I/O)",
+            "rec_ram_val": "32GB 이상 (대용량 배치 처리)",
+            "rec_gpu_val": "RTX 4090 x2 (병렬 처리)",
+            "rec_ssd_val": "NVMe 500GB (빠른 I/O)",
+            "package_title": "배포 패키지 생성",
+            "components_title": "포함될 구성 요소",
+            "comp_model": "파인튜닝된 sLLM 모델 파일",
+            "comp_prompt": "프롬프트 템플릿 라이브러리",
+            "comp_api": "API 서버 및 웹 인터페이스",
+            "comp_docker": "Docker 컨테이너 설정",
+            "comp_guide": "설치 및 운영 가이드",
+            "btn_download": "온프레미스 패키지 다운로드",
+            "size_est_title": "예상 패키지 크기",
+            "size_est_desc": "모델 파일: ~14GB, 전체 패키지: ~18GB",
+            "guide_title": "배포 가이드",
+            "step_1": "1단계: 환경 준비",
+            "step_2": "2단계: 모델 배포",
+            "step_3": "3단계: 서비스 확인"
+        },
+        "benefits": {
+            "title": "sLLM 자동화의 핵심 이점",
+            "description": "소형 언어모델을 활용한 AI 평가 자동화로 비용 절감과 효율성을 동시에 확보하세요.",
+            "b1_title": "실시간 평가",
+            "b1_desc": "새로운 AI 시스템 등록 즉시 자동 위험성 평가 수행",
+            "b2_title": "비용 효율성",
+            "b2_desc": "대형 모델 대비 90% 비용 절감, 온프레미스 운영 가능",
+            "b3_title": "데이터 보안",
+            "b3_desc": "민감한 에너지 데이터를 외부로 전송하지 않고 내부에서 처리",
+            "b4_title": "맞춤형 특화",
+            "b4_desc": "에너지 도메인에 특화된 파인튜닝으로 높은 정확도 달성"
+        },
+        "roi": {
+            "title": "ROI 계산기",
+            "description": "sLLM 자동화 도입으로 얻을 수 있는 비용 절감 효과를 계산해보세요.",
+            "manual_title": "현재 수동 평가 비용",
+            "expert_cost": "전문가 시간당 비용",
+            "time_per_system": "AI 시스템당 평가 시간",
+            "monthly_cases": "월간 평가 건수",
+            "monthly_total": "월간 총 비용",
+            "auto_title": "sLLM 자동화 비용",
+            "setup_cost": "초기 구축 비용",
+            "monthly_op_cost": "월간 운영 비용",
+            "time_per_eval": "평가당 소요 시간",
+            "monthly_savings": "월간 절감 효과",
+            "payback_period": "투자 회수 기간: 3.8개월",
+            "annual_savings": "연간 절감 효과: 158,400,000원"
+        },
+        "architecture": {
+            "title": "sLLM 자동화 아키텍처",
+            "description": "에너지 AI 평가에 특화된 소형 언어모델 기반 자동화 시스템 구조",
+            "cards": {
+                "engine_title": "sLLM Core Engine",
+                "engine_desc_risk": "7B 파라미터, 위험성 평가 전문",
+                "engine_desc_compliance": "13B 파라미터, 법규 준수 검증",
+                "engine_desc_bias": "7B 파라미터, 편향성 탐지",
+                "prompt_title": "Prompt Engineering",
+                "prompt_desc_dynamic": "시나리오별 맞춤형 프롬프트 자동 생성",
+                "prompt_desc_context": "에너지 도메인 지식 자동 주입",
+                "prompt_desc_format": "구조화된 JSON 응답 보장",
+                "deploy_title": "On-premise Deployment",
+                "deploy_desc_docker": "원클릭 배포 및 스케일링",
+                "deploy_desc_api": "RESTful API 및 웹소켓 지원",
+                "deploy_desc_monitor": "모델 성능 및 리소스 사용량 추적"
+            },
+            "items": {
+                "dynamic_prompt": "동적 프롬프트 생성",
+                "context_opt": "컨텍스트 최적화",
+                "format_std": "출력 형식 표준화",
+                "docker": "Docker 컨테이너화",
+                "api_gateway": "API Gateway",
+                "monitor_dashboard": "모니터링 대시보드"
+            }
+        }
+    },
+    "sllm_data": {
+        "models": {
+            "energy_risk_v1_desc": "에너지 AI 시스템의 위험성 평가 전문 sLLM",
+            "compliance_v2_desc": "에너지 관련 법규 준수 자동 검증 sLLM",
+            "bias_v1_desc": "에너지 데이터 편향성 자동 탐지 sLLM"
+        },
+        "templates": {
+            "risk_assessment_name": "위험성 평가 프롬프트",
+            "risk_assessment_content": "다음 에너지 AI 시스템에 대한 위험성을 평가해주세요:\\n\\n시스템 정보:\\n- 이름: {system_name}\\n- 목적: {purpose}\\n- 데이터 유형: {data_types}\\n- 사용자 영향도: {impact_level}\\n\\n평가 기준:\\n1. 개인정보 처리 위험도 (1-10점)\\n2. 에너지 그리드 안정성 영향도 (1-10점)\\n3. 규제 준수 필요성 (1-10점)\\n4. 사회적 영향도 (1-10점)\\n\\n각 항목별 점수와 근거를 제시하고, 전체 위험 등급(LOW/MEDIUM/HIGH/CRITICAL)을 결정해주세요.",
+            "compliance_check_name": "규제 준수 검증 프롬프트",
+            "compliance_check_content": "다음 에너지 AI 시스템의 규제 준수 현황을 검증해주세요:\\n\\n시스템 정보:\\n- 시스템명: {system_name}\\n- 카테고리: {category}\\n- 처리 데이터: {data_types}\\n\\n검증할 법규:\\n- AI기본법 (고영향 AI 신고 의무)\\n- 개인정보보호법 (개인정보 처리 동의)\\n- 전기사업법 (전력설비 안전기준)\\n- 에너지이용합리화법 (에너지 효율 기준)\\n\\n각 법규별 준수 여부와 미준수 시 필요한 조치사항을 구체적으로 제시해주세요.",
+            "bias_analysis_name": "편향성 분석 프롬프트",
+            "bias_analysis_content": "다음 에너지 데이터셋의 편향성을 분석해주세요:\\n\\n데이터셋 정보:\\n- 데이터 유형: {data_type}\\n- 수집 기간: {collection_period}\\n- 데이터 규모: {data_size}\\n- 지역 분포: {regional_distribution}\\n\\n분석 항목:\\n1. 지역별 편향성 (수도권 vs 지방)\\n2. 시간대별 편향성 (피크 vs 비피크)\\n3. 계절별 편향성 (여름 vs 겨울)\\n4. 사용자 그룹별 편향성 (연령, 소득, 가구형태)\\n\\n각 편향성의 정도(0-1 스케일)와 완화 방안을 제시해주세요."
+        }
+    },
+    "risk": {
+        "low": "정상",
+        "medium": "주의",
+        "high": "위험",
+        "critical": "심각"
+    },
+    "data": {
+        "svc_001_name": "신용대출 심사 AI 솔루션",
+        "svc_002_name": "글로벌 인재 채용 스크리닝 v2",
+        "svc_003_name": "지능형 고객 민원 상담 챗봇",
+        "svc_004_name": "심혈관 질환 조기 진단 보조 장치",
+        "svc_005_name": "배송 경로 최적화 알고리즘",
+        "group_gender": "성별 (남성/여성)",
+        "group_age": "연령 (20대/60대)",
+        "group_region": "거주 지역 (수도권/비수도권)",
+        "group_job": "직업군 (정규직/비정규직)",
+        "feat_income": "연 소득 (Annual Income)",
+        "feat_credit": "신용 점수 (Credit Score)",
+        "feat_loans": "기존 대출 건수 (Existing Loans)",
+        "feat_housing": "주거 형태 (Housing Type)",
+        "rt_scen_adv": "적대적 샘플 삽입 공격 (Adversarial Attack)",
+        "rt_det_adv": "노이즈 삽입을 통한 심사 결과 조작 시도 방어 성공",
+        "rt_scen_ext": "모델 추출 공격 (Model Extraction)",
+        "rt_det_ext": "API 반복 쿼리를 통한 가중치 추론 차단 확인",
+        "rt_scen_poi": "데이터 포이즈닝 (Data Poisoning)",
+        "rt_det_poi": "학습 데이터 오염 시 성능 저하 구간 발견, 재학습 필요",
+        "law_kr": "AI 기본법 (대한민국)",
+        "law_eu": "EU AI Act",
+        "law_fin": "금융소비자 보호법",
+        "law_priv": "개인정보 보호법",
+        "svc_001_desc": "개인 및 소상공인 대상 신용대출 승인 여부 및 한도 산출 알고리즘",
+        "svc_001_owner": "리스크관리팀 김철수",
+        "svc_002_desc": "지원서 자동 분석 및 면접 대상자 우선순위 추천 엔진",
+        "svc_002_owner": "인사기획팀 이영희",
+        "svc_003_desc": "LLM 기반의 실시간 고객 문의 자동 응대 및 감정 분석",
+        "svc_003_owner": "CS운영팀 박지민",
+        "svc_004_desc": "의료 영상 및 생체 신호 기반의 고위험 질병 예측 모델",
+        "svc_004_owner": "R&D본부 최강민",
+        "svc_005_desc": "실시간 교통 상황을 반영한 물류 차량 이동 경로 최적화",
+        "svc_005_owner": "물류IT팀 정은지",
+        "ra_001_notice": "본 서비스는 AI에 의해 대출 심사 결과가 결정됩니다. 결과에 이의가 있는 경우 담당자에게 재심사를 요청할 수 있습니다.",
+        "chk_1_req": "알고리즘의 공정성 테스트 수행 여부",
+        "chk_2_req": "개인정보 영향평가 실시",
+        "chk_3_req": "이용자 고지 의무 준수",
+        "chk_4_req": "인적 개입권 보장 (Human-in-the-loop)",
+        "cat_finance_loan": "금융/대출",
+        "cat_hr_recruitment": "채용/인사",
+        "cat_customer_service": "고객 서비스",
+        "cat_medical_diag": "의료/진단",
+        "cat_logistics_opt": "물류/최적화"
+    },
+    "tech_val": {
+        "hero": {
+            "title": "기술 검증 보고서 (Technical Validation Detail)",
+            "desc": "AI 모델의 데이터 편향성, 보안성, 설명 가능성을 심층 분석하고 실시간 안전성을 보증합니다."
+        },
+        "metrics": {
+            "security": "보안성 점수 (Security Score)",
+            "explainability": "설명 가능성 (Explainability)",
+            "red_teaming": "레드티밍 성공률",
+            "bias": "최고 편향 수치"
+        },
+        "bias_map": {
+            "title": "Data Bias Map",
+            "desc": "학습 데이터 내 인구통계학적 편향성 분석",
+            "insight": "현재 <strong>직업군 (정규직/비정규직)</strong> 항목에서 0.21의 상대적 편향이 탐지되었습니다. 비정규직 데이터 보강 또는 샘플링 가중치 조정이 권장됩니다.",
+            "safe": "Safe",
+            "high": "High Bias"
+        },
+        "xai": {
+            "title": "XAI Feature Heatmap",
+            "desc": "결과 도출에 영향을 미친 핵심 변수 (SHAP/LIME)"
+        },
+        "log": {
+            "title": "Red Teaming & Security Log",
+            "desc": "적대적 공격 시나리오별 방어 성공률 및 취약점 리포트",
+            "last_run": "최종 수행일: 2026.01.24",
+            "th_scenario": "공격 시나리오 (Attack Scenario)",
+            "th_status": "상태 (Status)",
+            "th_details": "상세 내역 (Details)",
+            "alert": "데이터 포이즈닝 취약점이 발견되었습니다. 모델 재학습 및 입력 필터링 강화가 필요합니다.",
+            "btn_guide": "상세 기술 가이드 다운로드",
+            "status_passed": "PASSED",
+            "status_failed": "FAILED"
+        },
+        "agent": {
+            "title": "AI Governance Agent",
+            "desc": "sLLM 기반 거버넌스 에이전트가 최신 가이드라인과 모델 사양을 대조하여 실시간으로 위험 요소를 재평가하고 있습니다.",
+            "last_sync": "최근 동기화: 5분 전"
+        },
+        "scan": {
+            "title": "추가 분석 스캔 실행",
+            "desc": "소스코드 PII 노출 여부 및 취약점 자동 스캔을 새롭게 실행합니다.",
+            "btn_start": "새로운 스캔 시작"
+        }
+    },
+    "compliance": {
+        "hero": {
+            "tag": "Global Compliance Engine",
+            "title": "AI 규제 및 컴플라이언스 관리",
+            "desc": "대한민국 AI 기본법부터 EU AI Act, 금융소비자 보호법까지 전 세계 주요 규제 대응 현황을 실시간으로 추적하고 관리합니다. 2026년 최신 가이드라인이 시스템에 자동으로 반영되어 있습니다."
+        },
+        "metrics": {
+            "rate": "전체 규제 준수율",
+            "items": "전체 이행 항목",
+            "issues": "미결 위험 이슈",
+            "updates": "규제 업데이트"
+        },
+        "chart": {
+            "title": "법령별 대응 현황 분석",
+            "desc": "주요 법적 요구사항에 대한 달성률 시각화"
+        },
+        "report": {
+            "title": "최신 규제 동향 리포트",
+            "btn_all": "모든 가이드라인 보기",
+            "items": {
+                "1": {
+                    "title": "EU AI Act 최종 승인 및 시행 가이드라인",
+                    "cat": "Global"
+                },
+                "2": {
+                    "title": "금융권 AI 알고리즘 투명성 확보 방안",
+                    "cat": "Finance"
+                },
+                "3": {
+                    "title": "개인정보보호법 개정안(제3자 전송권)",
+                    "cat": "Privacy"
+                },
+                "4": {
+                    "title": "생성형 AI 저작권 분쟁 판례 분석",
+                    "cat": "Legal"
+                }
+            }
+        },
+        "agent": {
+            "title": "sLLM Governance Agent",
+            "desc": "새로운 판례나 가이드라인이 업데이트되면, 기존 서비스 정의서와 대조하여 위험 요소를 자동으로 재평가합니다.",
+            "monitoring": "현재 4,281개의 글로벌 규제 항목 모니터링 중",
+            "update": "최근 자동 업데이트: 2시간 전",
+            "btn_start": "자동 규제 분석 시작"
+        },
+        "alert": {
+            "title": "긴급 준수 권고",
+            "desc": "즉각적인 조치가 필요한 항목",
+            "content": "EU AI Act Art.14(인적 개입권 보장)에 따라 고영향 AI 서비스의 운영 프로세스 수정이 필요합니다.",
+            "btn_plan": "이행 계획 수립",
+            "btn_detail": "상세보기"
+        },
+        "footer": {
+            "disclaimer": "본 시스템은 2026-01-30 기준 최신 법률 정보를 바탕으로 정보를 제공하며, 최종 법적 판단은 전문 법무 검토를 권장합니다."
+        }
+    },
+    "service_detail": {
+        "header": {
+            "manager": "관리 책임자",
+            "btn_report": "리포트 다운로드",
+            "btn_stop": "긴급 정지"
+        },
+        "status": {
+            "operating": "운영 중",
+            "developing": "개발 중",
+            "planning": "기획 중",
+            "emergency_stop": "긴급 정지"
+        },
+        "metrics": {
+            "risk_level": "종합 위험 등급",
+            "compliance_rate": "컴플라이언스 준수율",
+            "security_score": "보안성 점수",
+            "explainability_score": "설명 가능성 점수"
+        },
+        "tabs": {
+            "overview": "종합 개요",
+            "governance": "거버넌스 & 컴플라이언스",
+            "technical": "기술 검증 상세",
+            "monitoring": "실시간 모니터링"
+        },
+        "overview": {
+            "service_risk_summary": "서비스 정의 및 리스크 요약",
+            "category": "카테고리",
+            "last_updated": "최종 업데이트",
+            "risk_points_title": "주요 위험 식별 포인트",
+            "risk_high_impact": "고영향 AI",
+            "risk_high_impact_desc": "금융 심사 모델로서 의사결정의 편향성이 고객의 경제적 권리에 직접적 영향 미침",
+            "risk_data_sensitivity": "데이터 민감도",
+            "risk_data_sensitivity_desc": "개인 신용 정보 및 금융 거래 내역 포함으로 인한 PII 유출 위험 존재",
+            "risk_trend_title": "위험 추이 분석",
+            "algo_integrity_title": "알고리즘 무결성",
+            "algo_integrity_desc": "학습 데이터와 모델 구조의 기술적 안전성 지표",
+            "accuracy": "모델 정확도 (Accuracy)",
+            "recall": "재현율 (Recall)",
+            "op_visibility_title": "운영 가시성",
+            "op_visibility_desc": "실시간 서비스 운영 및 탐지 현황",
+            "process_speed": "현재 처리 속도",
+            "process_speed_val": "평균 120ms / request",
+            "security_threats": "미처리 보안 위협",
+            "security_threats_val": "지난 24시간 내 0건",
+            "status_normal": "Normal",
+            "status_clear": "Clear"
+        },
+        "governance": {
+            "checklist_title": "Compliance 체크리스트",
+            "checklist_desc": "주요 법령 및 내부 가이드라인 준수 현황",
+            "status_met": "준수",
+            "status_unmet": "미준수",
+            "ref_law": "관련 근거",
+            "auto_notice_title": "자동 생성 고지 문구 (sLLM Agent)",
+            "auto_notice_desc": "소비자 보호법에 의거한 AI 서비스 이용 고지",
+            "btn_edit": "문구 수정하기",
+            "compliance_status_title": "법규별 대응 현황"
+        },
+        "technical": {
+            "bias_map_title": "Data Bias Map",
+            "bias_map_desc": "학습 데이터 내 주요 속성별 편향성 측정 결과",
+            "xai_title": "XAI Feature Heatmap",
+            "xai_desc": "의사결정에 영향을 미치는 주요 변수 가시화 (SHAP Value)",
+            "red_teaming_title": "Red Teaming Log",
+            "red_teaming_desc": "적대적 공격 시나리오별 보안 취약점 리포트"
+        },
+        "monitoring": {
+            "drift_title": "모델 성능 모니터링 (Drift Detection)",
+            "drift_desc": "운영 중인 모델의 정확도 추이 및 컨셉 드리프트 감지",
+            "alert_log_title": "실시간 알림 로그",
+            "alert_1_title": "데이터 분포 변화 감지",
+            "alert_1_desc": "연령대별 대출 신청 분포가 학습 데이터와 15% 이상 차이 발생",
+            "time_now": "방금 전",
+            "alert_2_title": "정기 재검증 완료",
+            "alert_2_desc": "2026-01-30 정기 거버넌스 체크 통과",
+            "time_2h": "2시간 전",
+            "emergency_title": "Emergency Actions",
+            "emergency_desc": "위험 지표 임계치 도달 시 자동 조치 설정",
+            "btn_block": "실시간 차단 모드 활성화",
+            "btn_manual": "수동 개입 승인 요청"
+        }
+    }
+}

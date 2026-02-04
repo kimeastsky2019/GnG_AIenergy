@@ -1,0 +1,707 @@
+{
+    "hero": {
+        "tagline": "2026 AI Governance Orchestrator Solution",
+        "title_1": "Prove AI Reliability",
+        "title_2": "With Data",
+        "title_3": ".",
+        "description": "Beyond simple checklists, secure regulatory compliance and technical safety with 'AI Governance Orchestrator', guarding the entire AI model lifecycle based on data.",
+        "cta_demo": "Start Demo",
+        "cta_download": "Download Brochure"
+    },
+    "architecture": {
+        "title": "3-Layer Integrated Architecture",
+        "description": "We propose a seamless risk management system from planning to operation.",
+        "governance": {
+            "title": "Governance Layer",
+            "desc": "Proactively determines suitability in the planning stage based on legal (AI Act, etc.) databases.",
+            "features": [
+                "Auto Regulatory Mapping",
+                "High-Impact AI Detection",
+                "Compliance Guide"
+            ]
+        },
+        "technical": {
+            "title": "Technical Validation",
+            "desc": "Analyzes data and models directly to measure bias, security (Red Teaming), and explainability.",
+            "features": [
+                "Data Bias Map",
+                "Red Teaming Log",
+                "XAI Heatmap"
+            ]
+        },
+        "monitoring": {
+            "title": "Monitoring Layer",
+            "desc": "Detects performance degradation (Drift) and anomalies in operating models in real-time to prevent incidents.",
+            "features": [
+                "Real-time Drift Detection",
+                "Incident Escalation",
+                "Automatic Emergency Stop"
+            ]
+        }
+    },
+    "command_center": {
+        "title": "Real-time Risk Command Center",
+        "description": "Grasp the risk status of enterprise AI services at a glance. Support immediate decision-making through a traffic light system (Green, Yellow, Red) and automate reporting by visualising regulatory compliance status.",
+        "active_services": "Active Services",
+        "avg_risk_score": "Avg Risk Score",
+        "compliance_rate": "Enterprise Compliance Rate"
+    },
+    "automation": {
+        "title": "Intelligent Automation Technology",
+        "scanner": {
+            "title": "AI Scanners",
+            "desc": "Automatically scans source code and datasets to detect PII exposure and security vulnerabilities."
+        },
+        "agent": {
+            "title": "sLLM Governance Agent",
+            "desc": "When latest precedents and guidelines are updated, it cross-references existing service definitions to re-evaluate risk factors."
+        },
+        "escalation": {
+            "title": "Incident Escalation",
+            "desc": "Sends immediate alerts upon sudden model accuracy drops or harmful content generation, and initiates 'Emergency Stop' if necessary."
+        },
+        "sllm": {
+            "title": "sLLM Automation System",
+            "desc": "Utilizes sLLM to fully automate AI risk assessment, compliance verification, and bias analysis, operable independently in on-premise environments."
+        }
+    },
+    "cta_footer": {
+        "title": "Secure AI Safety Now.",
+        "description": "We propose a governance framework optimized for your AI service through expert consultation.",
+        "cta_sllm": "sLLM Automation System",
+        "cta_consult": "Consult Expert",
+        "cta_trial": "Request Free Trial"
+    },
+    "risk_card": {
+        "title": "Credit Assessment AI Model v2.0",
+        "desc": "Compliance with Financial Protection Act & Bias Verification Required"
+    },
+    "units": {
+        "count": "ea",
+        "pts": "pts"
+    },
+    "footer": {
+        "terms": "Terms of Use",
+        "privacy": "Privacy Policy",
+        "support": "Support",
+        "copyright": "© 2026 AI Sentinel Corp. All rights reserved."
+    },
+    "cards": {
+        "services": "Services",
+        "compliance_rate": "Compliance Rate",
+        "vs_last_month": "vs Last Month",
+        "state": "Status",
+        "docs_complete": "Docs Complete",
+        "review_needed": "items need review",
+        "rate_rising": "Compliance Rising",
+        "compliance_items_status": "{{completed}} of {{mandatory}} mandatory items completed"
+    },
+    "charts": {
+        "risk_index": "Risk Index",
+        "safety_index": "Safety Index",
+        "bias": "Bias",
+        "accuracy": "Accuracy (%)",
+        "drift": "Model Drift"
+    },
+    "risk": {
+        "low": "Normal",
+        "medium": "Caution",
+        "high": "High Risk",
+        "critical": "Critical"
+    },
+    "data": {
+        "svc_001_name": "Credit Loan Audit AI Solution",
+        "svc_002_name": "Global Talent Screening v2",
+        "svc_003_name": "Intelligent Customer Service Chatbot",
+        "svc_004_name": "CV Disease Early Diagnosis Assistant",
+        "svc_005_name": "Delivery Route Optimization Algorithm",
+        "group_gender": "Gender (Male/Female)",
+        "group_age": "Age (20s/60s)",
+        "group_region": "Region (Metro/Non-Metro)",
+        "group_job": "Job Type (Regular/Contract)",
+        "feat_income": "Annual Income",
+        "feat_credit": "Credit Score",
+        "feat_loans": "Existing Loans",
+        "feat_housing": "Housing Type",
+        "rt_scen_adv": "Adversarial Attack",
+        "rt_det_adv": "Successfully defended against manipulation via noise injection",
+        "rt_scen_ext": "Model Extraction Attack",
+        "rt_det_ext": "Blocked weight inference via API query throttling",
+        "rt_scen_poi": "Data Poisoning",
+        "rt_det_poi": "Detected performance drop segment, retraining required",
+        "law_kr": "AI Act (South Korea)",
+        "law_eu": "EU AI Act",
+        "law_fin": "Financial Consumer Protection Act",
+        "law_priv": "Privacy Act",
+        "svc_001_desc": "Algorithm for credit loan approval and limit calculation for individuals and small businesses",
+        "svc_001_owner": "Risk Mgmt Team: Kim Cheol-su",
+        "svc_002_desc": "Automated resume analysis and candidate prioritization engine",
+        "svc_002_owner": "HR Planning: Lee Young-hee",
+        "svc_003_desc": "LLM-based real-time customer inquiry response and sentiment analysis",
+        "svc_003_owner": "CS Ops Team: Park Ji-min",
+        "svc_004_desc": "High-risk disease prediction model based on medical imaging and bio-signals",
+        "svc_004_owner": "R&D Division: Choi Kang-min",
+        "svc_005_desc": "Logistics route optimization reflecting real-time traffic conditions",
+        "svc_005_owner": "Logistics IT: Jung Eun-ji",
+        "ra_001_notice": "This service uses AI to determine loan approval results. If you object to the result, you may request a manual review.",
+        "chk_1_req": "Completion of algorithm fairness testing",
+        "chk_2_req": "Execution of Privacy Impact Assessment (PIA)",
+        "chk_3_req": "Compliance with user notification obligations",
+        "chk_4_req": "Guarantee of Human-in-the-loop intervention rights",
+        "cat_finance_loan": "Finance/Loan",
+        "cat_hr_recruitment": "HR/Recruitment",
+        "cat_customer_service": "Customer Service",
+        "cat_medical_diag": "Medical/Diagnosis",
+        "cat_logistics_opt": "Logistics/Optimization"
+    },
+    "tech_val": {
+        "hero": {
+            "title": "Technical Validation Detail",
+            "desc": "In-depth analysis of AI model data bias, security, and explainability to guarantee real-time safety."
+        },
+        "metrics": {
+            "security": "Security Score",
+            "explainability": "Explainability",
+            "red_teaming": "Red Teaming Success Rate",
+            "bias": "Max Bias Score"
+        },
+        "bias_map": {
+            "title": "Data Bias Map",
+            "desc": "Demographic bias analysis in training data",
+            "insight": "Currently detected 0.21 relative bias in <strong>Job Type (Regular/Contract)</strong>. Supplementing contract worker data or adjusting sampling weights is recommended.",
+            "safe": "Safe",
+            "high": "High Bias"
+        },
+        "xai": {
+            "title": "XAI Feature Heatmap",
+            "desc": "Key variables influencing results (SHAP/LIME)"
+        },
+        "log": {
+            "title": "Red Teaming & Security Log",
+            "desc": "Defense success rate and vulnerability report by attack scenario",
+            "last_run": "Last Run: 2026.01.24",
+            "th_scenario": "Attack Scenario",
+            "th_status": "Status",
+            "th_details": "Details",
+            "alert": "Data Poisoning vulnerability detected. Model retraining and input filtering reinforcement required.",
+            "btn_guide": "Download Tech Guide",
+            "status_passed": "PASSED",
+            "status_failed": "FAILED"
+        },
+        "agent": {
+            "title": "AI Governance Agent",
+            "desc": "sLLM-based governance agent re-evaluates risk factors in real-time against latest guidelines and model specs.",
+            "last_sync": "Last Sync: 5 mins ago"
+        },
+        "scan": {
+            "title": "Run Additional Scan",
+            "desc": "Execute new scan for PII exposure and code vulnerabilities.",
+            "btn_start": "Start New Scan"
+        }
+    },
+    "compliance": {
+        "hero": {
+            "tag": "Global Compliance Engine",
+            "title": "AI Regulation & Compliance Management",
+            "desc": "Real-time tracking and management of global regulations from Korea AI Act to EU AI Act. 2026 latest guidelines are automatically reflected."
+        },
+        "metrics": {
+            "rate": "Compliance Rate",
+            "items": "Total Items",
+            "issues": "Pending Risks",
+            "updates": "Reg Updates"
+        },
+        "chart": {
+            "title": "Regulation Status Analysis",
+            "desc": "Visualizing achievement rates for key legal requirements"
+        },
+        "report": {
+            "title": "Latest Regulation Trend Report",
+            "btn_all": "View All Guidelines",
+            "items": {
+                "1": {
+                    "title": "EU AI Act Final Approval & Guidelines",
+                    "cat": "Global"
+                },
+                "2": {
+                    "title": "Financial AI Transparency Measures",
+                    "cat": "Finance"
+                },
+                "3": {
+                    "title": "Privacy Act Amendment (Data Portability)",
+                    "cat": "Privacy"
+                },
+                "4": {
+                    "title": "Generative AI Copyright Precedents Analysis",
+                    "cat": "Legal"
+                }
+            }
+        },
+        "agent": {
+            "title": "sLLM Governance Agent",
+            "desc": "Automatically re-evaluates risk factors against existing service definitions when new precedents or guidelines are updated.",
+            "monitoring": "Monitoring 4,281 global regulation items",
+            "update": "Auto-update: 2 hours ago",
+            "btn_start": "Start Analysis"
+        },
+        "alert": {
+            "title": "Urgent Compliance Notice",
+            "desc": "Items requiring immediate action",
+            "content": "Operational process modification required for High-Impact AI Services per EU AI Act Art.14 (Human Oversight).",
+            "btn_plan": "Establish Plan",
+            "btn_detail": "Details"
+        },
+        "footer": {
+            "disclaimer": "This system provides information based on latest laws as of 2026-01-30. Professional legal review is recommended for final judgments."
+        }
+    },
+    "assessment": {
+        "title": "AI Service Risk Assessment",
+        "description": "Determines high-impact AI status and automatically generates compliance requirements during the planning phase.",
+        "sllm_agent_active": "sLLM Governance Agent Active",
+        "metrics": {
+            "waiting": "Services Pending Assessment",
+            "high_impact_rate": "High-Impact AI Rate",
+            "avg_score": "Avg Compliance Score",
+            "updates_24h": "Updates in last 24h"
+        },
+        "wizard": {
+            "title": "High-Impact AI Wizard",
+            "description": "Automatically calculates regulatory grade based on service purpose and data nature."
+        },
+        "regulation_status": {
+            "title": "Compliance Status",
+            "description": "Global & Domestic Law Compliance Rates"
+        },
+        "guidelines": {
+            "title": "Assessment Guidelines",
+            "items": [
+                "Finance, Healthcare, and HR fields are likely to be classified as 'High-Impact AI'.",
+                "Algorithm transparency is mandatory based on the EU AI Act and local AI laws.",
+                "Results are cross-referenced with the real-time legal DB by the sLLM agent."
+            ]
+        },
+        "result": {
+            "title": "Risk Assessment Result",
+            "high_risk": "High-Impact AI (High Risk)",
+            "low_risk": "Low Risk AI",
+            "notice_title": "Auto-generated Consumer Notice",
+            "notice_high": "This service utilizes AI technology for [{{serviceName}}]. Your data is processed fairly, and you have the right to object to automated decisions.",
+            "notice_low": "This service includes auxiliary AI features for user convenience.",
+            "compliance_score": "Compliance Score",
+            "checklist_title": "Mandatory Checklist",
+            "checklist_desc": "Requirements based on relevant laws"
+        },
+        "checklist": {
+            "c1": "Algorithm Fairness Review",
+            "c2": "Privacy Impact Assessment",
+            "c3": "User Notification Duty",
+            "c4": "Human Oversight Procedure",
+            "status": {
+                "completed": "Completed",
+                "pending": "Action Needed",
+                "not_applicable": "N/A"
+            },
+            "law_basis": "Basis"
+        },
+        "actions": {
+            "download_report": "Download PDF Report",
+            "request_approval": "Request Governance Approval"
+        }
+    },
+    "dashboard": {
+        "title": "Risk Command Center",
+        "description": "Enterprise AI Governance & Risk Management Status (Last Updated: 2026-01-30 23:31)",
+        "search_placeholder": "Search services or regulations...",
+        "btn_report": "Generate Report",
+        "metrics": {
+            "total_services": "Total AI Services",
+            "high_risk_detected": "High-Risk Detected",
+            "avg_compliance": "Avg Compliance",
+            "realtime_monitoring": "Real-time Monitoring"
+        },
+        "risk_overview": {
+            "title": "Enterprise Risk Index: Caution",
+            "description": "Reflection of Financial Consumer Protection Act amendments and technical validation of high-impact AI services needed.",
+            "chart_title": "Monthly Risk & Safety Trend",
+            "chart_desc": "Risk detection and governance compliance rate over the last 6 months",
+            "live_update": "Live Update"
+        },
+        "bottleneck": {
+            "title": "Risk Assessment Bottlenecks by Stage",
+            "stages": {
+                "planning": "Planning",
+                "development": "Development",
+                "operation": "Operation",
+                "maintenance": "Maintenance"
+            },
+            "waiting_count": "{{count}} Services Pending",
+            "note": "* Currently, multiple financial AI services are awaiting data bias testing in the 'Technical Validation' stage."
+        },
+        "global_compliance": {
+            "title": "Global Compliance Rate"
+        },
+        "high_risk_list": {
+            "title": "High Risk Services (Focus Group)",
+            "description": "List of services with 'HIGH' risk level or in emergency stop status.",
+            "view_all": "View All Services"
+        },
+        "banner": {
+            "feature_tag": "Feature: sLLM Governance Agent",
+            "title": "Intelligent Automation",
+            "description": "When latest precedents or guidelines are updated, it automatically re-evaluates risk factors against existing service definitions. AI directly handles complex compliance management.",
+            "btn_run": "Run Agent",
+            "btn_update": "Update History"
+        }
+    },
+    "monitoring": {
+        "title": "Real-time AI Monitoring",
+        "description": "Detects and controls model performance degradation (Drift) and anomalies in real-time.",
+        "system_time": "System Time",
+        "metrics": {
+            "drift": "Real-time Data Drift",
+            "unresolved_alerts": "Unresolved Alerts",
+            "latency": "Avg Inference Latency",
+            "uptime": "System Uptime"
+        },
+        "performance": {
+            "title": "Performance Monitoring (Performance & Drift)",
+            "subtitle": "Model accuracy and drift trends over the last 24 hours",
+            "live": "Live",
+            "integrated": "All Services"
+        },
+        "table": {
+            "title": "Operating Service Status",
+            "search_placeholder": "Search services...",
+            "headers": {
+                "service_name": "Service Name",
+                "status": "Status",
+                "accuracy": "Accuracy",
+                "risk_index": "Risk Index",
+                "action": "Action"
+            },
+            "status": {
+                "operating": "Operating",
+                "emergency_stop": "Emergency Stop",
+                "evaluating": "Evaluating"
+            },
+            "actions": {
+                "stop": "Stop",
+                "restart": "Restart"
+            },
+            "toast_stop": "{{serviceName}} has been emergency stopped.",
+            "toast_desc": "Blocked by system due to detected security vulnerabilities and performance degradation."
+        },
+        "alerts": {
+            "title": "Critical Security Alert (PII Leak)",
+            "pii_risk": "PII Exposure Risk Detected",
+            "pii_desc": "Unmasked social security number pattern detected in inference logs of [Credit Loan Audit AI].",
+            "btn_filter": "Enable Auto-Filtering",
+            "btn_detail": "Detail Analysis",
+            "perf_warning": "Performance Warning",
+            "perf_desc": "Hallucination index of [Customer Service Chatbot] exceeded threshold (0.15).",
+            "detected_at": "Detected At",
+            "waiting_action": "Action Pending"
+        },
+        "incidents": {
+            "title": "Recent Incident Log",
+            "log_1": "Deployment of Credit Assessment Model v2.4 completed successfully.",
+            "log_2": "Regular maintenance of HR Screening Service completed.",
+            "log_3": "Delivery Algorithm emergency patch applied.",
+            "log_default": "Model Version Update Completed",
+            "view_all": "View All Logs",
+            "time_ago": "2h ago"
+        }
+    },
+    "sllm_automation": {
+        "header": {
+            "badge": "sLLM Automation System",
+            "title_prefix": "Fully Automated",
+            "title_highlight": "AI Assessment",
+            "description": "Establish a system that automates AI risk assessment, regulatory compliance verification, and bias analysis using small language models (sLLM) and can operate independently in an on-premise environment."
+        },
+        "tabs": {
+            "models": "sLLM Model Management",
+            "prompts": "Prompt Engineering",
+            "training": "Fine-tuning",
+            "export": "On-premise Deployment"
+        },
+        "models": {
+            "available_title": "Available sLLM Models",
+            "size": "Size",
+            "accuracy": "Accuracy",
+            "updated": "Updated",
+            "performance_title": "Model Performance Metrics",
+            "total_accuracy": "Total Accuracy",
+            "precision": "Precision",
+            "recall": "Recall",
+            "realtime_test_title": "Real-time Evaluation Test",
+            "input_label": "Test Input Data",
+            "input_placeholder": "Enter AI system information to evaluate...",
+            "btn_evaluating": "Evaluating sLLM...",
+            "btn_evaluate": "Run sLLM Evaluation",
+            "eval_complete": "Evaluation Complete",
+            "eval_metrics": {
+                "accuracy": "Accuracy",
+                "precision": "Precision",
+                "recall": "Recall",
+                "f1": "F1 Score",
+                "bias": "Bias Score",
+                "compliance": "Compliance Rate"
+            },
+            "automation_settings_title": "Automation Settings",
+            "auto_risk": "Auto Risk Assessment",
+            "auto_risk_desc": "Auto-evaluate when registering new AI systems",
+            "realtime_compliance": "Real-time Compliance Verification",
+            "realtime_compliance_desc": "Auto re-verify upon regulation changes",
+            "auto_bias": "Auto Bias Detection",
+            "auto_bias_desc": "Re-analyze bias upon data updates"
+        },
+        "prompts": {
+            "library_title": "Prompt Template Library",
+            "optimizer_title": "Prompt Optimization Tools",
+            "auto_complete": "Variable Auto-complete",
+            "validation": "Prompt Validation",
+            "btn_validate": "Check Prompt Validity",
+            "editor_title": "Prompt Editor",
+            "editor_label": "Prompt Content",
+            "editor_placeholder": "Enter prompt or select a template from the left...",
+            "btn_save": "Save",
+            "btn_test": "Test",
+            "analysis_title": "Prompt Performance Analysis",
+            "clarity": "Clarity",
+            "completeness": "Completeness",
+            "efficiency": "Efficiency",
+            "suggestions_title": "Improvement Suggestions",
+            "suggestion_1": "Recommend adding more specific evaluation criteria",
+            "suggestion_2": "Accuracy can be improved by including example cases",
+            "suggestion_3": "Consistency improved by standardizing output format"
+        },
+        "training": {
+            "settings_title": "Fine-tuning Settings",
+            "base_model": "Select Base Model",
+            "base_model_placeholder": "Select a base model",
+            "dataset_label": "Training Dataset",
+            "upload_instruction": "Upload Energy AI Evaluation Dataset",
+            "btn_select_file": "Select File",
+            "learning_rate": "Learning Rate",
+            "batch_size": "Batch Size",
+            "epochs": "Epochs",
+            "validation_split": "Validation Split",
+            "quality_title": "Training Data Quality Analysis",
+            "quality_good": "Dataset Quality: Excellent",
+            "total_samples": "Total Samples",
+            "label_accuracy": "Label Accuracy",
+            "balance": "Data Balance",
+            "deduplication": "Deduplication Rate",
+            "distribution_title": "Distribution by Category",
+            "cat_risk": "Risk Assessment",
+            "cat_compliance": "Compliance",
+            "cat_bias": "Bias Analysis",
+            "execution_title": "Execute Fine-tuning",
+            "progress_title": "Training Progress",
+            "status_idle": "Idle",
+            "epoch_info": "Current Epoch",
+            "eta": "Estimated Time Remaining",
+            "gpu_usage": "GPU Usage",
+            "btn_stop": "Stop Training",
+            "btn_start": "Start Fine-tuning",
+            "complete_title": "Fine-tuning Complete",
+            "final_accuracy": "Final Accuracy",
+            "val_loss": "Validation Loss",
+            "training_time": "Training Time",
+            "logs_title": "Training Logs",
+            "log_loading": "Training data loading complete",
+            "log_init": "Model initialization complete",
+            "log_epoch_start": "Epoch {{num}} started",
+            "log_epoch_end": "Epoch {{num}} complete - Validation Accuracy: {{acc}}%"
+        },
+        "export": {
+            "settings_title": "On-premise Deployment Settings",
+            "select_model_label": "Select Deployment Model",
+            "select_model_placeholder": "Select a model",
+            "env_label": "Deployment Environment",
+            "hw_optim_label": "Hardware Optimization",
+            "compression_label": "Model Compression",
+            "quantization": "Quantization (INT8)",
+            "pruning": "Pruning",
+            "distillation": "Knowledge Distillation",
+            "requirements_title": "System Requirements",
+            "min_req_title": "Minimum Hardware Requirements",
+            "storage": "Storage",
+            "network": "Network",
+            "rec_req_title": "Recommended Specs",
+            "rec_ram": "RAM: 32GB+ (Large Batch Processing)",
+            "rec_gpu": "GPU: RTX 4090 x2 (Parallel Processing)",
+            "rec_ssd": "SSD: NVMe 500GB (Fast I/O)",
+            "rec_ram_val": "32GB+ (Large Batch Processing)",
+            "rec_gpu_val": "RTX 4090 x2 (Parallel Processing)",
+            "rec_ssd_val": "NVMe 500GB (Fast I/O)",
+            "package_title": "Create Deployment Package",
+            "components_title": "Included Components",
+            "comp_model": "Fine-tuned sLLM Model File",
+            "comp_prompt": "Prompt Template Library",
+            "comp_api": "API Server & Web Interface",
+            "comp_docker": "Docker Container Configuration",
+            "comp_guide": "Installation & Operation Guide",
+            "btn_download": "Download On-premise Package",
+            "size_est_title": "Estimated Package Size",
+            "size_est_desc": "Model File: ~14GB, Total Package: ~18GB",
+            "guide_title": "Deployment Guide",
+            "step_1": "Step 1: Environment Prep",
+            "step_2": "Step 2: Model Deployment",
+            "step_3": "Step 3: Service Check"
+        },
+        "benefits": {
+            "title": "Key Benefits of sLLM Automation",
+            "description": "Secure both cost reduction and efficiency with AI assessment automation using small language models.",
+            "b1_title": "Real-time Evaluation",
+            "b1_desc": "Immediate auto-risk assessment upon new AI system registration",
+            "b2_title": "Cost Efficiency",
+            "b2_desc": "90% cost reduction compared to large models, operate on-premise",
+            "b3_title": "Data Security",
+            "b3_desc": "Process sensitive energy data internally without external transfer",
+            "b4_title": "Customized",
+            "b4_desc": "Achieve high accuracy with fine-tuning specialized for energy domain"
+        },
+        "roi": {
+            "title": "ROI Calculator",
+            "description": "Calculate the cost savings achievable with sLLM automation.",
+            "manual_title": "Current Manual Assessment Cost",
+            "expert_cost": "Expert Hourly Cost",
+            "time_per_system": "Assessment Time per System",
+            "monthly_cases": "Monthly Cases",
+            "monthly_total": "Monthly Total Cost",
+            "auto_title": "sLLM Automation Cost",
+            "setup_cost": "Initial Setup Cost",
+            "monthly_op_cost": "Monthly Operating Cost",
+            "time_per_eval": "Time per Assessment",
+            "monthly_savings": "Monthly Savings",
+            "payback_period": "Payback Period: 3.8 months",
+            "annual_savings": "Annual Savings: 158,400,000 KRW"
+        },
+        "architecture": {
+            "title": "sLLM Automation Architecture",
+            "description": "Small language model-based automation system architecture specialized for energy AI assessment",
+            "cards": {
+                "engine_title": "sLLM Core Engine",
+                "engine_desc_risk": "7B Parameters, Risk Assessment Specialist",
+                "engine_desc_compliance": "13B Parameters, Compliance Verification",
+                "engine_desc_bias": "7B Parameters, Bias Detection",
+                "prompt_title": "Prompt Engineering",
+                "prompt_desc_dynamic": "Auto-generate scenario-specific prompts",
+                "prompt_desc_context": "Auto-inject energy domain knowledge",
+                "prompt_desc_format": "Guarantee structured JSON response",
+                "deploy_title": "On-premise Deployment",
+                "deploy_desc_docker": "One-click deploy & scaling",
+                "deploy_desc_api": "RESTful API & WebSocket support",
+                "deploy_desc_monitor": "Track model performance & resource usage"
+            },
+            "items": {
+                "dynamic_prompt": "Dynamic Prompt Generation",
+                "context_opt": "Context Optimization",
+                "format_std": "Output Format Standardization",
+                "docker": "Docker Containerization",
+                "api_gateway": "API Gateway",
+                "monitor_dashboard": "Monitoring Dashboard"
+            }
+        }
+    },
+    "sllm_data": {
+        "models": {
+            "energy_risk_v1_desc": "sLLM specialized in risk assessment of Energy AI Systems",
+            "compliance_v2_desc": "sLLM for auto-verification of energy-related compliance",
+            "bias_v1_desc": "sLLM for auto-detection of energy data bias"
+        },
+        "templates": {
+            "risk_assessment_name": "Risk Assessment Prompt",
+            "risk_assessment_content": "Please assess the risk of the following Energy AI System:\\n\\nSystem Info:\\n- Name: {system_name}\\n- Purpose: {purpose}\\n- Data Types: {data_types}\\n- User Impact: {impact_level}\\n\\nEvaluation Criteria:\\n1. Privacy Risk (1-10)\\n2. Energy Grid Stability Impact (1-10)\\n3. Regulatory Compliance Necessity (1-10)\\n4. Social Impact (1-10)\\n\\nPlease provide scores and rationale for each item, and determine the overall risk level (LOW/MEDIUM/HIGH/CRITICAL).",
+            "compliance_check_name": "Compliance Verification Prompt",
+            "compliance_check_content": "Please verify the compliance status of the following Energy AI System:\\n\\nSystem Info:\\n- Name: {system_name}\\n- Category: {category}\\n- Processed Data: {data_types}\\n\\nRegulations to Verify:\\n- AI Basic Act (High-impact AI notification duty)\\n- Personal Information Protection Act (Consent for processing)\\n- Electricity Business Act (Safety standards for power facilities)\\n- Energy Use Rationalization Act (Energy efficiency standards)\\n\\nPlease specify compliance status for each regulation and necessary actions if non-compliant.",
+            "bias_analysis_name": "Bias Analysis Prompt",
+            "bias_analysis_content": "Please analyze the bias of the following Energy Dataset:\\n\\nDataset Info:\\n- Data Type: {data_type}\\n- Collection Period: {collection_period}\\n- Data Size: {data_size}\\n- Regional Distribution: {regional_distribution}\\n\\nAnalysis Items:\\n1. Regional Bias (Capital vs Local)\\n2. Temporal Bias (Peak vs Off-peak)\\n3. Seasonal Bias (Summer vs Winter)\\n4. User Group Bias (Age, Income, Household Type)\\n\\nPlease provide the degree of bias (0-1 scale) and mitigation strategies for each."
+        }
+    },
+    "service_detail": {
+        "header": {
+            "manager": "Manager",
+            "btn_report": "Download Report",
+            "btn_stop": "Emergency Stop"
+        },
+        "status": {
+            "operating": "Operating",
+            "developing": "Developing",
+            "planning": "Planning",
+            "emergency_stop": "Emergency Stop"
+        },
+        "metrics": {
+            "risk_level": "Overall Risk Level",
+            "compliance_rate": "Compliance Rate",
+            "security_score": "Security Score",
+            "explainability_score": "Explainability Score"
+        },
+        "tabs": {
+            "overview": "Overview",
+            "governance": "Governance & Compliance",
+            "technical": "Technical Validation",
+            "monitoring": "Real-time Monitoring"
+        },
+        "overview": {
+            "service_risk_summary": "Service Definition & Risk Summary",
+            "category": "Category",
+            "last_updated": "Last Updated",
+            "risk_points_title": "Key Risk Points",
+            "risk_high_impact": "High Impact AI",
+            "risk_high_impact_desc": "As a financial screening model, decision bias directly impacts customers' economic rights",
+            "risk_data_sensitivity": "Data Sensitivity",
+            "risk_data_sensitivity_desc": "Risk of PII leakage due to inclusion of personal credit info and transaction history",
+            "risk_trend_title": "Risk Trend Analysis",
+            "algo_integrity_title": "Algorithm Integrity",
+            "algo_integrity_desc": "Technical safety indicators of training data and model structure",
+            "accuracy": "Model Accuracy",
+            "recall": "Recall",
+            "op_visibility_title": "Operational Visibility",
+            "op_visibility_desc": "Real-time service operation and detection status",
+            "process_speed": "Current Processing Speed",
+            "process_speed_val": "Avg 120ms / request",
+            "security_threats": "Unresolved Security Threats",
+            "security_threats_val": "0 in last 24h",
+            "status_normal": "Normal",
+            "status_clear": "Clear"
+        },
+        "governance": {
+            "checklist_title": "Compliance Checklist",
+            "checklist_desc": "Status of compliance with major laws and internal guidelines",
+            "status_met": "Met",
+            "status_unmet": "Unmet",
+            "ref_law": "Reference",
+            "auto_notice_title": "Auto-generated Notice (sLLM Agent)",
+            "auto_notice_desc": "AI service usage notice based on consumer protection laws",
+            "btn_edit": "Edit Notice",
+            "compliance_status_title": "Response Status by Regulation"
+        },
+        "technical": {
+            "bias_map_title": "Data Bias Map",
+            "bias_map_desc": "Bias measurement results by key attributes in training data",
+            "xai_title": "XAI Feature Heatmap",
+            "xai_desc": "Visualization of key variables affecting decisions (SHAP Value)",
+            "red_teaming_title": "Red Teaming Log",
+            "red_teaming_desc": "Security vulnerability report by adversarial attack scenario"
+        },
+        "monitoring": {
+            "drift_title": "Model Performance Monitoring (Drift Detection)",
+            "drift_desc": "Accuracy trend and concept drift detection of operating model",
+            "alert_log_title": "Real-time Alert Log",
+            "alert_1_title": "Data Distribution Shift Detected",
+            "alert_1_desc": "Age distribution in loan applications differs by >15% from training data",
+            "time_now": "Just now",
+            "alert_2_title": "Regular Re-validation Completed",
+            "alert_2_desc": "Passed regular governance check on 2026-01-30",
+            "time_2h": "2 hours ago",
+            "emergency_title": "Emergency Actions",
+            "emergency_desc": "Auto-action settings when risk thresholds are reached",
+            "btn_block": "Activate Blocking Mode",
+            "btn_manual": "Request Manual Intervention"
+        }
+    }
+}
