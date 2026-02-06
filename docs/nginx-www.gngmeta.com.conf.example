@@ -1,44 +1,41 @@
-# www.gngmeta.com - AI Energy SLLM 앱 (루트(/) 및 /aienergy/ 모두 연결)
-# 서버(34.64.248.144)에 적용 방법:
-# 1. 이 내용으로 /etc/nginx/sites-available/www.gngmeta.com.conf 생성
-# 2. sudo ln -sf /etc/nginx/sites-available/www.gngmeta.com.conf /etc/nginx/sites-enabled/
+# gngmeta.com / www.gngmeta.com - AI Energy SLLM 앱
+# 현재 앱은 base: '/' 로 빌드되어 /assets/... 를 요청하므로,
+# 이 도메인의 document root 를 배포 폴더(aienergy)로 맞춰야 합니다.
+#
+# 적용 방법 (34.64.248.144):
+# 1. 이 내용으로 /etc/nginx/sites-available/gngmeta.com.conf 생성
+# 2. sudo ln -sf /etc/nginx/sites-available/gngmeta.com.conf /etc/nginx/sites-enabled/
 # 3. sudo nginx -t && sudo systemctl reload nginx
-# 4. SSL: sudo certbot --nginx -d www.gngmeta.com
+# 4. SSL: sudo certbot --nginx -d gngmeta.com -d www.gngmeta.com
 
 server {
     listen 80;
-    server_name www.gngmeta.com;
-    root /var/www/html;
+    server_name gngmeta.com www.gngmeta.com;
+    # 앱이 /var/www/html/aienergy/ 에 배포되어 있으므로, document root 를 그 폴더로 설정
+    root /var/www/html/aienergy;
+    index index.html;
 
-    # 루트(/) 접속 시에도 앱 표시: aienergy의 index.html 사용
     location / {
-        try_files $uri $uri/ /aienergy/index.html;
+        try_files $uri $uri/ /index.html;
     }
 
-    # /aienergy/* 자산 및 SPA 폴백 (앱이 base /aienergy/ 로 빌드됨)
-    location /aienergy/ {
-        alias /var/www/html/aienergy/;
-        try_files $uri $uri/ /aienergy/index.html;
+    location /assets/ {
         expires 1y;
         add_header Cache-Control "public, immutable";
     }
 }
 
-# SSL 적용 후 예시 (certbot --nginx 가 추가하는 형태 참고)
+# SSL 적용 후 (certbot --nginx 가 생성하는 블록과 동일하게 root 유지)
 # server {
 #     listen 443 ssl http2;
-#     server_name www.gngmeta.com;
-#     root /var/www/html;
-#     ssl_certificate /etc/letsencrypt/live/www.gngmeta.com/fullchain.pem;
-#     ssl_certificate_key /etc/letsencrypt/live/www.gngmeta.com/privkey.pem;
+#     server_name gngmeta.com www.gngmeta.com;
+#     root /var/www/html/aienergy;
+#     index index.html;
+#     ssl_certificate /etc/letsencrypt/live/gngmeta.com/fullchain.pem;
+#     ssl_certificate_key /etc/letsencrypt/live/gngmeta.com/privkey.pem;
 #     include /etc/letsencrypt/options-ssl-nginx.conf;
 #     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 #
-#     location / { try_files $uri $uri/ /aienergy/index.html; }
-#     location /aienergy/ {
-#         alias /var/www/html/aienergy/;
-#         try_files $uri $uri/ /aienergy/index.html;
-#         expires 1y;
-#         add_header Cache-Control "public, immutable";
-#     }
+#     location / { try_files $uri $uri/ /index.html; }
+#     location /assets/ { expires 1y; add_header Cache-Control "public, immutable"; }
 # }

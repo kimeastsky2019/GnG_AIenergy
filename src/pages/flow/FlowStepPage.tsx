@@ -14,7 +14,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ChevronLeft, ChevronRight, GitBranch, ListChecks, Brain, Sparkles, ShieldCheck, Zap, Bot, MessageSquare, BookOpen, Wand2, Search, Save, Paperclip, FileText, Upload, CheckCircle2, XCircle, AlertTriangle, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { toast } from "sonner"; // Assuming sonner is installed as per package.json
+import { toast } from "sonner";
+import { JourneyStepper } from "@/components/flow/JourneyStepper";
+import { ScenarioSummaryCard } from "@/components/flow/ScenarioSummaryCard";
 
 // Generated Abstract Illustrations
 import imgPlanning from "@/assets/flow_planning.png";
@@ -50,6 +52,7 @@ export default function FlowStepPage() {
   const [isConsulting, setIsConsulting] = useState(false);
   const [consultResult, setConsultResult] = useState<any>(null);
   const [processingState, setProcessingState] = useState<Record<string, string>>({}); // 'generating' | 'searching'
+  const [selectedScenarioId, setSelectedScenarioId] = useState<string | null>(null);
 
   const requirements = stepId ? getFlowRequirements(stepId, i18n.language) : [];
   const step = stepId ? getFlowStepById(stepId) : undefined;
@@ -59,6 +62,10 @@ export default function FlowStepPage() {
   // Reset state on step change or load from localStorage
   useEffect(() => {
     if (!stepId) return;
+
+    // Load selected scenario context
+    const storedScenarioId = localStorage.getItem("selected_scenario");
+    setSelectedScenarioId(storedScenarioId);
 
     // Load saved data
     const savedData = localStorage.getItem(`flow_step_${stepId}`);
@@ -107,10 +114,15 @@ export default function FlowStepPage() {
     else navigate(ROUTE_PATHS.HOME);
   };
 
+  const handleBackToDemo = () => {
+    navigate(ROUTE_PATHS.DEMO);
+  };
+
   const handleNext = (path: string) => {
     // 입력 여부와 관계없이 항상 다음 단계로 이동
     navigate(path);
   };
+  // ... rest of logic ...
 
   const handleSave = () => {
     // Save provided data to localStorage
@@ -275,61 +287,105 @@ export default function FlowStepPage() {
   return (
     <Layout>
       <div className="max-w-[1600px] mx-auto space-y-8 pb-20 px-4 md:px-8">
-        {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="font-medium text-primary">{t("flow.progress_label")}</span>
-              <span>{stepOrder + 1} of {totalSteps}</span>
+        {/* Journey Stepper */}
+        <JourneyStepper currentFlowStepId={stepId} />
+
+        {/* Redesigned Hero Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-2xl bg-white min-h-[320px] flex items-center justify-center text-center"
+        >
+          {/* Background Image */}
+          <img
+            src="/assets/flow_hero_bg.png"
+            className="absolute inset-0 w-full h-full object-cover opacity-90"
+            alt="Background"
+          />
+          <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]" />
+
+          {/* Centered Content */}
+          <div className="relative z-10 flex flex-col items-center gap-6 max-w-4xl px-4">
+            <div className="font-bold text-sm tracking-[0.2em] uppercase text-foreground/80">
+              Total {totalSteps} Steps
             </div>
-            <h1 className="text-3xl font-bold tracking-tight">{t(step.titleKey)}</h1>
-            <p className="text-muted-foreground max-w-2xl">{t(step.descriptionKey)}</p>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-tight">
+              {t(step.titleKey)}
+            </h1>
+
+            <p className="text-xl md:text-2xl font-bold text-foreground/90 leading-relaxed break-keep">
+              {t(step.descriptionKey)}
+            </p>
           </div>
 
-          <div className="flex gap-3">
+          {/* Action Buttons (Absolute Right) */}
+          <div className="absolute bottom-6 right-6 hidden xl:flex items-center gap-3">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleBackToDemo}
+              className="text-xs text-muted-foreground hover:text-foreground"
+            >
+              Demo View
+            </Button>
+          </div>
+
+          {/* Mobile Actions (Visible only on small screens) */}
+          <div className="xl:hidden absolute top-4 right-4">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleBackToDemo}
+            >
+              <Layout className="w-5 h-5" />
+            </Button>
+          </div>
+        </motion.div>
+
+        {/* Action Bar (Below Header for better usability in this centered layout) */}
+        <div className="flex justify-end gap-3 pb-2">
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={handleSave}
+            disabled={isLocked}
+            className="gap-2 rounded-full border-primary/20 hover:bg-primary/5"
+          >
+            <Save className="w-4 h-4" />
+            {i18n.language.startsWith('ko') ? "임시 저장" : "Save Draft"}
+          </Button>
+
+          {(nextPath || hasBranch) && (
             <Button
               variant="outline"
               size="lg"
-              onClick={handleSave}
-              className="gap-2"
-              disabled={isLocked}
+              onClick={() => handleNext(nextPath || step.nextBranch![0].path)}
+              className="gap-2 rounded-full border-primary/50 text-primary hover:bg-primary/10"
             >
-              <Save className="w-4 h-4" />
-              {i18n.language.startsWith('ko') ? "임시 저장" : "Save Draft"}
+              {i18n.language.startsWith('ko') ? "다음 단계" : "Next Step"}
+              <ChevronRight className="w-4 h-4" />
             </Button>
+          )}
 
-            {/* Quick Next Button */}
-            {(nextPath || hasBranch) && (
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => handleNext(nextPath || step.nextBranch![0].path)}
-                className="gap-2 border-primary/50 text-primary hover:bg-primary/10"
-              >
-                {i18n.language.startsWith('ko') ? "다음 단계" : "Next Step"}
-                <ChevronRight className="w-4 h-4" />
-              </Button>
+          <Button
+            size="lg"
+            onClick={handleConsult}
+            disabled={isConsulting || isLocked}
+            className="rounded-full bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white shadow-lg border-0"
+          >
+            {isConsulting ? (
+              <>
+                <Brain className="w-5 h-5 mr-2 animate-pulse" />
+                {t("flow_consult.btn_consulting")}
+              </>
+            ) : (
+              <>
+                <Sparkles className="w-5 h-5 mr-2" />
+                {t("flow_consult.btn_consult")}
+              </>
             )}
-
-            <Button
-              size="lg"
-              onClick={handleConsult}
-              disabled={isConsulting || isLocked}
-              className="bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white shadow-xl shadow-purple-500/20 transition-all duration-300 transform hover:scale-[1.02] border-0"
-            >
-              {isConsulting ? (
-                <>
-                  <Brain className="w-5 h-5 mr-2 animate-pulse" />
-                  {t("flow_consult.btn_consulting")}
-                </>
-              ) : (
-                <>
-                  <Sparkles className="w-5 h-5 mr-2" />
-                  {t("flow_consult.btn_consult")}
-                </>
-              )}
-            </Button>
-          </div>
+          </Button>
         </div>
 
         {/* Progress Bar */}
@@ -350,24 +406,6 @@ export default function FlowStepPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            {/* Visual Header Section (Abstract Art) */}
-            <div className="relative w-full h-48 md:h-64 rounded-3xl overflow-hidden shadow-lg border border-border/50 group mb-8">
-              <div className="absolute inset-0 bg-gradient-to-r from-background/10 to-transparent z-10" />
-              <img
-                src={getStepImage(stepId)}
-                alt="Step Illustration"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
-              />
-              <div className="absolute bottom-0 left-0 p-6 z-20 bg-gradient-to-t from-background via-background/80 to-transparent w-full">
-                <h2 className="text-2xl font-bold text-foreground drop-shadow-sm flex items-center gap-2">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-                    {t(step.titleKey)}
-                  </span>
-                </h2>
-              </div>
-            </div>
-
-            {/* Requirements List - Enhanced Layout */}
             {requirements.length > 0 ? (
               <div className="grid gap-6">
                 {requirements.map((feat, idx) => {
@@ -703,6 +741,7 @@ export default function FlowStepPage() {
 
           {/* Sidebar: sLLM Consultant Result */}
           <div className="xl:col-span-4 sticky top-6">
+            {selectedScenarioId && <ScenarioSummaryCard scenarioId={selectedScenarioId} />}
             <AnimatePresence mode="wait">
               {consultResult ? (
                 <motion.div

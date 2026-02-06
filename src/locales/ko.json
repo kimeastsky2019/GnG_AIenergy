@@ -114,7 +114,7 @@
             "high": "고위험"
         },
         "request_form": {
-            "title": "요청서 작성/처리 화면",
+            "title": "서비스 등록/처리",
             "description": "AI 서비스 도입·변경 요청서를 작성하고 접수·처리합니다."
         },
         "project_create": {
@@ -122,31 +122,31 @@
             "description": "새 AI 서비스 프로젝트를 생성하고 기본 정보를 입력합니다."
         },
         "planning_doc": {
-            "title": "AI 서비스 기획서 작성 화면",
+            "title": "AI 서비스 기획서 작성",
             "description": "AI 서비스 기획서를 작성·제출합니다."
         },
         "model_doc": {
-            "title": "AI 모델 설명서 작성 화면",
+            "title": "AI 모델 설명서 작성",
             "description": "AI 모델 설명서(용도, 데이터, 성능 등)를 작성합니다."
         },
         "pre_review_request": {
-            "title": "사전검토 요청 화면",
+            "title": "사전검토",
             "description": "사전검토를 요청하고 검토 범위를 설정합니다."
         },
         "risk_assessment": {
-            "title": "위험/영향/안전성 평가 화면",
+            "title": "위험/영향/안전성 평가",
             "description": "위험·영향·안전성을 평가하고 등급을 산정합니다."
         },
         "pre_review_result": {
-            "title": "사전검토 결과 확인 화면",
+            "title": "사전검토 결과 확인",
             "description": "사전검토 결과를 확인하고 후속 조치를 결정합니다."
         },
         "dev_plan": {
-            "title": "AI 모델 개발계획 수립 화면",
+            "title": "AI 모델 개발계획 수립",
             "description": "AI 모델 개발계획을 수립·등록합니다."
         },
         "risk_plan": {
-            "title": "위험관리 계획 수립 화면",
+            "title": "위험관리 계획 수립",
             "description": "위험관리 계획을 수립합니다."
         },
         "risk_level_judge": {
@@ -154,11 +154,11 @@
             "description": "판정된 위험등급에 따라 다음 단계를 선택합니다."
         },
         "risk_plan_approval": {
-            "title": "위험관리 계획 승인 화면",
+            "title": "위험관리 계획 승인",
             "description": "위험관리 계획에 대한 승인을 진행합니다. (저·중위험)"
         },
         "governance_approval": {
-            "title": "거버넌스 협의체 사전 승인 화면",
+            "title": "거버넌스 협의체 사전 승인",
             "description": "거버넌스 협의체의 사전 승인을 요청·확인합니다. (고위험)"
         },
         "dev_request": {
@@ -166,11 +166,11 @@
             "description": "개발을 ITSM에 의뢰하고 연계 정보를 입력합니다."
         },
         "dev_progress": {
-            "title": "개발 진행 관리 화면",
+            "title": "개발 진행 관리",
             "description": "개발 진행 상황을 관리·모니터링합니다."
         },
         "pre_op_verification": {
-            "title": "운영 전 검증 화면",
+            "title": "운영 전 검증",
             "description": "운영 전 검증을 수행하고 결과를 등록합니다."
         },
         "verification_branch": {
@@ -178,15 +178,15 @@
             "description": "위험등급에 따라 검증 결과 적절성 확인 또는 제3자 검증 경로를 선택합니다."
         },
         "verification_adequacy": {
-            "title": "검증 결과 적절성 확인 화면",
+            "title": "검증 결과 적절성 확인",
             "description": "검증 결과의 적절성을 확인합니다. (중위험)"
         },
         "third_party_verification": {
-            "title": "제3자 검증 요청/결과 등록 화면",
+            "title": "제3자 검증 및 결과 등록",
             "description": "제3자 검증을 요청하고 결과를 등록합니다. (고위험)"
         },
         "op_approval_request": {
-            "title": "운영 승인 요청 화면",
+            "title": "운영 승인",
             "description": "운영 승인을 요청합니다."
         },
         "deployment_approval": {
@@ -194,7 +194,7 @@
             "description": "위험관리 이행을 확인하고 배포를 승인합니다."
         },
         "deployment": {
-            "title": "AI 서비스 배포 화면",
+            "title": "AI 서비스 배포",
             "description": "AI 서비스를 배포하고 배포 이력을 관리합니다."
         },
         "dashboard": {
@@ -202,7 +202,7 @@
             "description": "운영 중인 AI 서비스를 모니터링합니다."
         },
         "improvement": {
-            "title": "개선 계획/개선 관리 화면",
+            "title": "개선 계획/개선 관리",
             "description": "개선 계획을 수립하고 이행을 관리합니다."
         },
         "revision_return": "보완 후 기획서/모델설명서로 수정",

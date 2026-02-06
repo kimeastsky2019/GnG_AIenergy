@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Play, 
-  CheckCircle2, 
-  AlertTriangle, 
-  Shield, 
-  FileCheck, 
-  Activity, 
-  ArrowRight, 
+import {
+  Play,
+  CheckCircle2,
+  AlertTriangle,
+  Shield,
+  FileCheck,
+  Activity,
+  ArrowRight,
   ArrowLeft,
   Clock,
   Users,
@@ -27,126 +27,22 @@ import { RiskTrendChart, BiasHeatmap, PerformanceChart } from "@/components/Char
 import { IMAGES } from "@/assets/images";
 import { springPresets, fadeInUp } from "@/lib/motion";
 
-const DEMO_STEPS = [
-  {
-    id: "scenario",
-    title: "데모 시나리오 선택",
-    description: "실제 업무 상황을 기반으로 한 데모 시나리오를 선택하세요"
-  },
-  {
-    id: "assessment",
-    title: "AI 서비스 위험성 평가",
-    description: "고영향 AI 판별 및 규제 준수 체크"
-  },
-  {
-    id: "technical",
-    title: "기술 검증 실행",
-    description: "편향성 분석, XAI, Red Teaming 수행"
-  },
-  {
-    id: "monitoring",
-    title: "실시간 모니터링",
-    description: "운영 중 위험 탐지 및 자동 대응"
-  },
-  {
-    id: "dashboard",
-    title: "통합 대시보드",
-    description: "전사 AI 위험 현황 종합 분석"
-  }
-];
-
-const DEMO_SCENARIOS = [
-  {
-    id: "energy_supply_solar",
-    title: "태양광 발전 예측 AI",
-    description: "스마트 그리드의 태양광 발전량 예측 시스템",
-    category: "고영향 AI",
-    riskLevel: "HIGH",
-    icon: "☀️",
-    details: {
-      purpose: "일사량, 기상 데이터 기반 태양광 발전량 예측",
-      dataTypes: ["기상 데이터", "일사량 정보", "발전 이력"],
-      regulations: ["전기사업법", "신에너지법", "AI기본법"],
-      stakeholders: ["전력거래소", "발전사업자", "전력소비자"]
-    }
-  },
-  {
-    id: "energy_supply_ess",
-    title: "ESS 에너지 저장 관리 AI",
-    description: "에너지 저장 시스템의 충방전 최적화 시스템",
-    category: "고영향 AI",
-    riskLevel: "HIGH",
-    icon: "🔋",
-    details: {
-      purpose: "ESS 충전 상태, 전력 수급 기반 최적 충방전 전략 수립",
-      dataTypes: ["배터리 상태", "전력 수급 데이터", "전력 가격"],
-      regulations: ["전기사업법", "신에너지법", "AI기본법"],
-      stakeholders: ["ESS 운영자", "전력거래소", "전력소비자"]
-    }
-  },
-  {
-    id: "energy_demand_hvac",
-    title: "스마트 공조 제어 AI",
-    description: "빌딩 내 공조 시스템의 에너지 효율 최적화",
-    category: "일반 AI",
-    riskLevel: "MEDIUM",
-    icon: "🌡️",
-    details: {
-      purpose: "실내 온도, 습도, 재실자 수 기반 공조 자동 제어",
-      dataTypes: ["온도 센서", "습도 센서", "재실자 감지"],
-      regulations: ["에너지이용합리화법", "건축물 에너지효율등급 인증제"],
-      stakeholders: ["빌딩 관리자", "재실자", "에너지공단"]
-    }
-  },
-  {
-    id: "energy_user_behavior",
-    title: "사용자 에너지 행동 분석 AI",
-    description: "개인 에너지 사용 패턴 분석 및 맞춤형 피드백 시스템",
-    category: "고영향 AI",
-    riskLevel: "HIGH",
-    icon: "📈",
-    details: {
-      purpose: "개인 에너지 사용 패턴, 생활 패턴 분석을 통한 맞춤형 절약 방안 제시",
-      dataTypes: ["전력 사용량", "생활 패턴", "기기 사용 데이터"],
-      regulations: ["개인정보보호법", "에너지이용합리화법", "AI기본법"],
-      stakeholders: ["에너지 소비자", "전력회사", "에너지공단"]
-    }
-  },
-  {
-    id: "energy_consulting",
-    title: "에너지 컴설팅 추천 AI",
-    description: "사용자 데이터 기반 맞춤형 에너지 컴설팅 서비스",
-    category: "고영향 AI",
-    riskLevel: "HIGH",
-    icon: "📊",
-    details: {
-      purpose: "사용자의 에너지 사용 패턴과 선호도를 분석하여 개인화된 에너지 컴설팅 제공",
-      dataTypes: ["에너지 사용 이력", "사용자 선호도", "건물 정보"],
-      regulations: ["개인정보보호법", "에너지이용합리화법", "AI기본법"],
-      stakeholders: ["에너지 소비자", "에너지 컴설팅 업체", "에너지공단"]
-    }
-  },
-  {
-    id: "energy_demand_supply_matching",
-    title: "수요-공급 최적 매칭 AI",
-    description: "실시간 에너지 수요와 공급을 최적으로 매칭하는 시스템",
-    category: "고영향 AI",
-    riskLevel: "CRITICAL",
-    icon: "⚖️",
-    details: {
-      purpose: "실시간 에너지 수요 예측과 공급 예측을 기반으로 최적 매칭 전략 수립",
-      dataTypes: ["수요 예측 데이터", "공급 예측 데이터", "전력 가격", "날씨 정보"],
-      regulations: ["전기사업법", "에너지이용합리화법", "AI기본법"],
-      stakeholders: ["전력거래소", "발전사업자", "전력소비자", "에너지공단"]
-    }
-  }
-];
+import { useNavigate } from "react-router-dom";
+import { DEMO_STEPS, DEMO_SCENARIOS } from "@/lib/data/demo-scenarios";
+import { ROUTE_PATHS } from "@/lib";
 
 export default function Demo() {
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedScenario, setSelectedScenario] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [completedSteps, setCompletedSteps] = useState<string[]>([]);
+  const navigate = useNavigate();
+
+  const handleStartFlow = (e: React.MouseEvent, scenarioId: string) => {
+    e.stopPropagation();
+    localStorage.setItem("selected_scenario", scenarioId);
+    navigate(ROUTE_PATHS.FLOW_REQUEST_FORM);
+  };
 
   const handleScenarioSelect = (scenarioId: string) => {
     setSelectedScenario(scenarioId);
@@ -201,13 +97,12 @@ export default function Demo() {
               {DEMO_STEPS.map((step, index) => (
                 <div key={step.id} className="flex items-center">
                   <div className="flex flex-col items-center">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all ${
-                      completedSteps.includes(step.id) 
-                        ? "bg-primary border-primary text-primary-foreground" 
-                        : currentStep === index
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all ${completedSteps.includes(step.id)
+                      ? "bg-primary border-primary text-primary-foreground"
+                      : currentStep === index
                         ? "border-primary text-primary bg-primary/10"
                         : "border-muted text-muted-foreground"
-                    }`}>
+                      }`}>
                       {completedSteps.includes(step.id) ? (
                         <CheckCircle2 className="w-5 h-5" />
                       ) : (
@@ -219,9 +114,8 @@ export default function Demo() {
                     </div>
                   </div>
                   {index < DEMO_STEPS.length - 1 && (
-                    <div className={`w-16 h-0.5 mx-4 transition-all ${
-                      completedSteps.includes(step.id) ? "bg-primary" : "bg-muted"
-                    }`} />
+                    <div className={`w-16 h-0.5 mx-4 transition-all ${completedSteps.includes(step.id) ? "bg-primary" : "bg-muted"
+                      }`} />
                   )}
                 </div>
               ))}
@@ -287,9 +181,14 @@ export default function Demo() {
                                 </div>
                               </div>
                             </div>
-                            <Button className="w-full mt-6">
-                              이 시나리오로 시작하기 <ArrowRight className="w-4 h-4 ml-2" />
-                            </Button>
+                            <div className="flex flex-col gap-2 mt-6">
+                              <Button className="w-full" onClick={() => handleScenarioSelect(scenario.id)}>
+                                데모 체험하기 <Play className="w-4 h-4 ml-2" />
+                              </Button>
+                              <Button variant="outline" className="w-full border-primary/20 hover:bg-primary/5 hover:text-primary" onClick={(e) => handleStartFlow(e, scenario.id)}>
+                                실제 플로우 시작 <ArrowRight className="w-4 h-4 ml-2" />
+                              </Button>
+                            </div>
                           </CardContent>
                         </Card>
                       </motion.div>
@@ -334,7 +233,7 @@ export default function Demo() {
                             </div>
                             <AlertTriangle className="w-8 h-8 text-destructive" />
                           </div>
-                          
+
                           <div className="space-y-3">
                             <div className="text-sm font-semibold">분류 근거:</div>
                             <ul className="space-y-2 text-sm">
@@ -362,9 +261,9 @@ export default function Demo() {
                         <CardContent>
                           <div className="p-4 bg-muted rounded-lg border-l-4 border-primary">
                             <div className="text-sm leading-relaxed">
-                              "본 에너지 관리 시스템은 인공지능을 활용하여 {selectedScenarioData.details.purpose}을(를) 수행합니다. 
-                              AI 시스템의 에너지 제어 결정에 대해 설명을 요구할 권리가 있으며, 
-                              비상 상황 시 수동 제어로 전환할 수 있습니다. 
+                              "본 에너지 관리 시스템은 인공지능을 활용하여 {selectedScenarioData.details.purpose}을(를) 수행합니다.
+                              AI 시스템의 에너지 제어 결정에 대해 설명을 요구할 권리가 있으며,
+                              비상 상황 시 수동 제어로 전환할 수 있습니다.
                               자세한 내용은 에너지 관리 시스템 이용약관을 참조하시기 바랍니다."
                             </div>
                           </div>
@@ -423,7 +322,7 @@ export default function Demo() {
                               </div>
                             ))}
                           </div>
-                          
+
                           <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                             <div className="flex items-center gap-2 text-yellow-800 font-medium text-sm">
                               <AlertCircle className="w-4 h-4" />
@@ -670,7 +569,7 @@ export default function Demo() {
                                 <div key={index} className="flex items-center gap-3">
                                   <div className="w-24 text-sm font-medium">{item.feature}</div>
                                   <div className="flex-1 bg-muted rounded-full h-6 relative overflow-hidden">
-                                    <div 
+                                    <div
                                       className={`h-full ${item.color} transition-all duration-1000`}
                                       style={{ width: `${item.impact * 100}%` }}
                                     />
@@ -693,7 +592,7 @@ export default function Demo() {
                               <div className="text-4xl font-bold text-primary mb-2">78/100</div>
                               <div className="text-sm text-muted-foreground">전체 설명가능성 점수</div>
                             </div>
-                            
+
                             <div className="space-y-4">
                               <div>
                                 <div className="flex justify-between text-sm mb-1">
@@ -840,7 +739,7 @@ export default function Demo() {
                                   긍정적 피드백
                                 </div>
                                 <div className="text-sm text-green-700">
-                                  {selectedScenario === "energy_user_behavior" 
+                                  {selectedScenario === "energy_user_behavior"
                                     ? "사용자의 87%가 에너지 사용 패턴 분석 결과에 만족하며, 절약 방안을 실제로 적용하고 있습니다."
                                     : "사용자의 82%가 맞춤형 에너지 컴설팅 서비스에 만족하며, 평균 15% 에너지 비용 절감 효과를 보고했습니다."
                                   }
@@ -911,7 +810,7 @@ export default function Demo() {
                                   </div>
                                 </div>
                               </div>
-                              
+
                               <div className="space-y-4">
                                 <h4 className="font-semibold">알고리즘 윤리성</h4>
                                 <div className="space-y-3">
@@ -982,7 +881,7 @@ export default function Demo() {
                   </div>
 
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-                    <MetricCard 
+                    <MetricCard
                       title="예측 정확도"
                       value={92.1}
                       unit="%"
@@ -991,7 +890,7 @@ export default function Demo() {
                       icon={TrendingUp}
                       color="destructive"
                     />
-                    <MetricCard 
+                    <MetricCard
                       title="예측 지연시간"
                       value={1.2}
                       unit="초"
@@ -1000,7 +899,7 @@ export default function Demo() {
                       icon={Clock}
                       color="warning"
                     />
-                    <MetricCard 
+                    <MetricCard
                       title="일일 예측량"
                       value={8640}
                       unit="회"
@@ -1048,10 +947,9 @@ export default function Demo() {
                             { time: "12:45", type: "error", message: "태양광 예측 정확도 임계값 하회 (90%)" },
                           ].map((log, index) => (
                             <div key={index} className="flex items-start gap-3 p-3 border rounded-lg">
-                              <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${
-                                log.type === "error" ? "bg-red-500" :
+                              <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${log.type === "error" ? "bg-red-500" :
                                 log.type === "warning" ? "bg-yellow-500" : "bg-blue-500"
-                              }`} />
+                                }`} />
                               <div className="flex-1">
                                 <div className="text-sm">{log.message}</div>
                                 <div className="text-xs text-muted-foreground">{log.time}</div>
@@ -1089,7 +987,7 @@ export default function Demo() {
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className="space-y-4">
                           <h4 className="font-semibold">최근 자동 대응 이력</h4>
                           <div className="space-y-3">
@@ -1157,7 +1055,7 @@ export default function Demo() {
                         <div className="text-sm text-green-600">정상 서비스</div>
                       </CardContent>
                     </Card>
-                    
+
                     <Card className="border-yellow-200 bg-yellow-50">
                       <CardContent className="p-6 text-center">
                         <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1167,7 +1065,7 @@ export default function Demo() {
                         <div className="text-sm text-yellow-600">주의 필요</div>
                       </CardContent>
                     </Card>
-                    
+
                     <Card className="border-red-200 bg-red-50">
                       <CardContent className="p-6 text-center">
                         <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1181,7 +1079,7 @@ export default function Demo() {
 
                   {/* Key Metrics */}
                   <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
-                    <MetricCard 
+                    <MetricCard
                       title="전체 서비스"
                       value={34}
                       unit="개"
@@ -1190,7 +1088,7 @@ export default function Demo() {
                       icon={Activity}
                       color="primary"
                     />
-                    <MetricCard 
+                    <MetricCard
                       title="규제 준수율"
                       value={91.2}
                       unit="%"
@@ -1199,7 +1097,7 @@ export default function Demo() {
                       icon={Shield}
                       color="primary"
                     />
-                    <MetricCard 
+                    <MetricCard
                       title="평균 위험도"
                       value={24}
                       unit="pts"
@@ -1208,7 +1106,7 @@ export default function Demo() {
                       icon={AlertTriangle}
                       color="destructive"
                     />
-                    <MetricCard 
+                    <MetricCard
                       title="월간 알림"
                       value={127}
                       unit="건"
@@ -1226,19 +1124,19 @@ export default function Demo() {
                         <CardTitle>위험 서비스 현황</CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-4">
-                        <RiskStatusCard 
+                        <RiskStatusCard
                           title={selectedScenarioData.title}
                           description="지역별 예측 편향 악화 및 예측 성능 저하 감지"
                           level="HIGH"
                           serviceCount={1}
                         />
-                        <RiskStatusCard 
+                        <RiskStatusCard
                           title="ESS 에너지 저장 관리 AI v2.3"
                           description="배터리 안전 기준 준수 검토 필요"
                           level="MEDIUM"
                           serviceCount={1}
                         />
-                        <RiskStatusCard 
+                        <RiskStatusCard
                           title="스마트 그리드 밸런싱 AI"
                           description="수급 균형 알고리즘 설명가능성 개선 권고"
                           level="MEDIUM"
@@ -1291,7 +1189,7 @@ export default function Demo() {
                       <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-4" />
                       <h3 className="text-2xl font-bold mb-4">데모 완료!</h3>
                       <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                        AI 거버넌스 오케스트레이터의 핵심 기능을 모두 체험해보셨습니다. 
+                        AI 거버넌스 오케스트레이터의 핵심 기능을 모두 체험해보셨습니다.
                         실제 도입을 위한 상담을 원하시면 전문가와 연결해드리겠습니다.
                       </p>
                       <div className="flex justify-center gap-4">

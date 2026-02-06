@@ -237,16 +237,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {/* --- Main Content --- */}
         <main
           className={cn(
-            "flex-1 min-w-0 transition-all duration-300",
+            "flex-1 min-w-0 transition-all duration-300 flex flex-col",
             isSidebarOpen ? "lg:pl-64" : "lg:pl-20"
           )}
         >
-          <div className="p-4 lg:p-8 max-w-[1600px] mx-auto">
+          <div className="p-4 lg:p-8 max-w-[1600px] mx-auto w-full flex-1">
             {children}
           </div>
 
           {/* --- Footer --- */}
-          <footer className="mt-auto py-8 px-4 lg:px-8 border-t border-border bg-muted/30">
+          <footer className="mt-auto py-8 px-4 lg:px-8 border-t border-border bg-muted/30 w-full">
             <div className="max-w-[1600px] mx-auto space-y-6">
               {/* Contact / Company Info */}
               <div className="flex flex-col sm:flex-row flex-wrap items-start justify-between gap-6 pb-6 border-b border-border/50">
