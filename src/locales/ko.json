@@ -1,10 +1,10 @@
 {
     "hero": {
-        "tagline": "2026 AI 거버넌스 오케스트레이터 솔루션",
-        "title_1": "AI의 신뢰성,",
-        "title_2": "데이터로 증명",
-        "title_3": "하십시오.",
-        "description": "단순한 체크리스트를 넘어 AI 모델의 생애주기 전반을 데이터 기반으로 감시하는 'AI Governance Orchestrator'를 통해 규제 대응과 기술적 안전성을 동시에 확보하십시오.",
+        "tagline": "sLLM 기반 완전 자동화된 규제 준수 시스템",
+        "title_1": "규제 대응,",
+        "title_2": "sLLM이 스스로 학습",
+        "title_3": "하여 자동화합니다.",
+        "description": "개선계획, 위험평가, 기술검증, 모니터링까지. 모든 거버넌스 프로세스를 sLLM이 자동으로 학습하고 실행하여 귀사의 AI 시스템을 안전하게 지킵니다.",
         "cta_demo": "데모 시작하기",
         "cta_download": "솔루션 소개서 다운로드"
     },
@@ -83,6 +83,9 @@
     "nav": {
         "home": "홈",
         "home_desc": "시스템 개요 및 아키텍처",
+        "section_process": "프로세스 관리",
+        "section_dashboard": "운영 대시보드",
+        "section_automation": "자동화 핵심",
         "dashboard_desc": "전사 AI 위험 커맨드 센터",
         "improvement_desc": "개선 계획·이행 관리",
         "assessment": "위험성 평가",

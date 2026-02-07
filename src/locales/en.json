@@ -1,10 +1,10 @@
 {
     "hero": {
-        "tagline": "2026 AI Governance Orchestrator Solution",
-        "title_1": "Prove AI Reliability",
-        "title_2": "With Data",
-        "title_3": ".",
-        "description": "Beyond simple checklists, secure regulatory compliance and technical safety with 'AI Governance Orchestrator', guarding the entire AI model lifecycle based on data.",
+        "tagline": "Fully Automated Compliance System with sLLM",
+        "title_1": "Regulation,",
+        "title_2": "sLLM learns",
+        "title_3": "and automates itself.",
+        "description": "From improvement plans to risk assessment, technical validation, and monitoring. sLLM automatically learns and executes all governance processes to safeguard your AI systems.",
         "cta_demo": "Start Demo",
         "cta_download": "Download Brochure"
     },
@@ -83,6 +83,9 @@
     "nav": {
         "home": "Home",
         "home_desc": "System overview and architecture",
+        "section_process": "Process Management",
+        "section_dashboard": "Operations Dashboard",
+        "section_automation": "Automation Core",
         "dashboard_desc": "Enterprise AI risk command center",
         "improvement_desc": "Improvement plan and execution",
         "assessment": "Risk assessment",

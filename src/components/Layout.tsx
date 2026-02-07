@@ -35,16 +35,40 @@ interface NavItem {
   matchPath?: (path: string) => boolean;
 }
 
-const mainNavItems: NavItem[] = [
-  { nameKey: "nav.home", path: ROUTE_PATHS.HOME, icon: Home, descriptionKey: "nav.home_desc" },
-  { nameKey: "flow.nav_start", path: ROUTE_PATHS.FLOW_REQUEST_FORM, icon: ListOrdered, descriptionKey: "flow.nav_start_desc", matchPath: (path) => path.startsWith("/flow") },
-  { nameKey: "flow.nav_dashboard", path: ROUTE_PATHS.DASHBOARD, icon: LayoutDashboard, descriptionKey: "nav.dashboard_desc" },
-  { nameKey: "flow.nav_improvement", path: ROUTE_PATHS.FLOW_IMPROVEMENT, icon: TrendingUp, descriptionKey: "nav.improvement_desc" },
-  { nameKey: "nav.assessment", path: ROUTE_PATHS.ASSESSMENT, icon: FileCheck, descriptionKey: "nav.assessment_desc" },
-  { nameKey: "nav.technical", path: ROUTE_PATHS.TECHNICAL_VALIDATION, icon: ShieldCheck, descriptionKey: "nav.technical_desc" },
-  { nameKey: "nav.monitoring", path: ROUTE_PATHS.MONITORING, icon: Activity, descriptionKey: "nav.monitoring_desc" },
-  { nameKey: "nav.compliance", path: ROUTE_PATHS.COMPLIANCE, icon: Scale, descriptionKey: "nav.compliance_desc" },
-  { nameKey: "nav.sllm", path: ROUTE_PATHS.SLLM_AUTOMATION, icon: Brain, descriptionKey: "nav.sllm_desc" },
+interface NavSection {
+  titleKey?: string;
+  items: NavItem[];
+}
+
+const navSections: NavSection[] = [
+  {
+    items: [
+      { nameKey: "nav.home", path: ROUTE_PATHS.HOME, icon: Home, descriptionKey: "nav.home_desc" },
+    ]
+  },
+  {
+    titleKey: "nav.section_process",
+    items: [
+      { nameKey: "flow.nav_start", path: ROUTE_PATHS.FLOW_REQUEST_FORM, icon: ListOrdered, descriptionKey: "flow.nav_start_desc", matchPath: (path) => path.startsWith("/flow") },
+    ]
+  },
+  {
+    titleKey: "nav.section_dashboard",
+    items: [
+      { nameKey: "flow.nav_dashboard", path: ROUTE_PATHS.DASHBOARD, icon: LayoutDashboard, descriptionKey: "nav.dashboard_desc" },
+      { nameKey: "flow.nav_improvement", path: ROUTE_PATHS.FLOW_IMPROVEMENT, icon: TrendingUp, descriptionKey: "nav.improvement_desc" },
+      { nameKey: "nav.assessment", path: ROUTE_PATHS.ASSESSMENT, icon: FileCheck, descriptionKey: "nav.assessment_desc" },
+      { nameKey: "nav.technical", path: ROUTE_PATHS.TECHNICAL_VALIDATION, icon: ShieldCheck, descriptionKey: "nav.technical_desc" },
+      { nameKey: "nav.monitoring", path: ROUTE_PATHS.MONITORING, icon: Activity, descriptionKey: "nav.monitoring_desc" },
+      { nameKey: "nav.compliance", path: ROUTE_PATHS.COMPLIANCE, icon: Scale, descriptionKey: "nav.compliance_desc" },
+    ]
+  },
+  {
+    titleKey: "nav.section_automation",
+    items: [
+      { nameKey: "nav.sllm", path: ROUTE_PATHS.SLLM_AUTOMATION, icon: Brain, descriptionKey: "nav.sllm_desc" },
+    ]
+  }
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -117,36 +141,51 @@ export function Layout({ children }: { children: React.ReactNode }) {
             isSidebarOpen ? "w-64" : "w-20"
           )}
         >
-          <div className="flex-1 py-6 flex flex-col gap-1 overflow-y-auto px-3">
-            {mainNavItems.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                className={({ isActive }) => {
-                  const active = item.matchPath ? item.matchPath(location.pathname) : isActive;
-                  return cn(
-                    "flex items-center gap-3 px-3 py-3 rounded-lg transition-all group relative",
-                    active
-                      ? "bg-sidebar-primary text-sidebar-primary-foreground shadow-md"
-                      : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                  );
-                }}
-              >
-                <item.icon size={20} className={cn("shrink-0", isSidebarOpen ? "" : "mx-auto")} />
-                {isSidebarOpen && (
-                  <div className="flex flex-col overflow-hidden">
-                    <span className="text-sm font-semibold truncate">{t(item.nameKey)}</span>
-                    {item.descriptionKey && (
-                      <span className="text-[10px] opacity-70 truncate">{t(item.descriptionKey)}</span>
+          <div className="flex-1 py-6 flex flex-col gap-6 overflow-y-auto px-3">
+            {navSections.map((section, idx) => (
+              <div key={idx} className="flex flex-col gap-1">
+                {/* Section Title */}
+                {section.titleKey && isSidebarOpen && (
+                  <div className="px-3 mb-1 mt-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground/60">
+                    {t(section.titleKey)}
+                  </div>
+                )}
+                {/* Divider for collapsed state */}
+                {section.titleKey && !isSidebarOpen && (
+                  <div className="h-px bg-border/40 mx-2 my-2" />
+                )}
+
+                {section.items.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className={({ isActive }) => {
+                      const active = item.matchPath ? item.matchPath(location.pathname) : isActive;
+                      return cn(
+                        "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group relative",
+                        active
+                          ? "bg-sidebar-primary text-sidebar-primary-foreground shadow-md font-medium"
+                          : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                      );
+                    }}
+                  >
+                    <item.icon size={20} className={cn("shrink-0", isSidebarOpen ? "" : "mx-auto")} />
+                    {isSidebarOpen && (
+                      <div className="flex flex-col overflow-hidden">
+                        <span className="text-sm font-semibold truncate">{t(item.nameKey)}</span>
+                        {item.descriptionKey && (
+                          <span className="text-[10px] opacity-70 truncate">{t(item.descriptionKey)}</span>
+                        )}
+                      </div>
                     )}
-                  </div>
-                )}
-                {!isSidebarOpen && (
-                  <div className="absolute left-16 bg-popover text-popover-foreground px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg border border-border">
-                    {t(item.nameKey)}
-                  </div>
-                )}
-              </NavLink>
+                    {!isSidebarOpen && (
+                      <div className="absolute left-14 bg-popover text-popover-foreground px-3 py-1.5 rounded-md text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl border border-border z-50 ml-2">
+                        {t(item.nameKey)}
+                      </div>
+                    )}
+                  </NavLink>
+                ))}
+              </div>
             ))}
           </div>
 
@@ -176,7 +215,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed top-0 left-0 bottom-0 w-[280px] bg-sidebar z-[60] lg:hidden border-r border-sidebar-border shadow-2xl p-6"
+                className="fixed top-0 left-0 bottom-0 w-[280px] bg-sidebar z-[60] lg:hidden border-r border-sidebar-border shadow-2xl p-6 overflow-y-auto"
               >
                 <div className="flex items-center justify-between mb-8">
                   <a href="https://agent.gngmeta.com/nanogrid/" className="flex items-center gap-2">
@@ -192,24 +231,33 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   </button>
                 </div>
 
-                <nav className="flex flex-col gap-2">
-                  {mainNavItems.map((item) => (
-                    <NavLink
-                      key={item.path}
-                      to={item.path}
-                      className={({ isActive }) => {
-                        const active = item.matchPath ? item.matchPath(location.pathname) : isActive;
-                        return cn(
-                          "flex items-center gap-4 px-4 py-3 rounded-xl transition-all",
-                          active
-                            ? "bg-primary text-primary-foreground shadow-lg"
-                            : "text-muted-foreground hover:bg-accent hover:text-foreground"
-                        );
-                      }}
-                    >
-                      <item.icon size={22} />
-                      <span className="font-medium">{t(item.nameKey)}</span>
-                    </NavLink>
+                <nav className="flex flex-col gap-6">
+                  {navSections.map((section, idx) => (
+                    <div key={idx} className="flex flex-col gap-1">
+                      {section.titleKey && (
+                        <div className="px-2 mb-2 text-xs font-bold uppercase tracking-wider text-primary/70">
+                          {t(section.titleKey)}
+                        </div>
+                      )}
+                      {section.items.map((item) => (
+                        <NavLink
+                          key={item.path}
+                          to={item.path}
+                          className={({ isActive }) => {
+                            const active = item.matchPath ? item.matchPath(location.pathname) : isActive;
+                            return cn(
+                              "flex items-center gap-4 px-4 py-3 rounded-xl transition-all",
+                              active
+                                ? "bg-primary text-primary-foreground shadow-lg"
+                                : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                            );
+                          }}
+                        >
+                          <item.icon size={22} />
+                          <span className="font-medium">{t(item.nameKey)}</span>
+                        </NavLink>
+                      ))}
+                    </div>
                   ))}
                 </nav>
 

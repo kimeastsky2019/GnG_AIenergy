@@ -189,6 +189,13 @@ const KO: StepRequirements = {
       description: "계획의 실효성 확보를 위해 유관 부서와의 협의를 공식화합니다."
     }
   ],
+  "risk-level-judge": [
+    {
+      featureName: "위험 등급 확정 및 분기 (Risk Level Confirmation)",
+      requirement: "앞선 위험성 평가 결과를 바탕으로 최종 위험 등급을 확인합니다. '고위험(High)'인 경우 거버넌스 위원회 승인 절차로, '저/중위험(Low/Medium)'인 경우 내부 승인 절차로 분기합니다.",
+      description: "위험 등급에 따른 적절한 승인 프로세스를 선택합니다."
+    }
+  ],
   "risk-plan-approval": [
     {
       featureName: "위험 관리 계획 승인 (Plan Approval)",
@@ -282,6 +289,13 @@ const KO: StepRequirements = {
         "고영향 AI 서비스의 경우 필요 시 기존 영향평가 결과를 재검토하거나 재수행할 수 있도록 하며, 수행 결과를 시스템에 등록·관리한다.",
       description: "서비스 변경 또는 검증 결과 반영에 따른 영향도를 재확인하기 위함",
     },
+  ],
+  "verification-branch": [
+    {
+      featureName: "검증 결과 분기 판정 (Verification Branching)",
+      requirement: "운영 전 검증 결과를 바탕으로 추가 검증 필요성을 판단합니다. 고위험 AI의 경우 '제3자 검증' 절차로, 그 외의 경우 '검증 적절성 확인' 절차로 진행합니다.",
+      description: "검증 결과 및 위험도에 따라 적절한 후속 검증 절차를 선택합니다."
+    }
   ],
   "verification-adequacy": [
     {
@@ -580,6 +594,13 @@ const EN: StepRequirements = {
       description: "Formalize consultation to ensure plan effectiveness."
     }
   ],
+  "risk-level-judge": [
+    {
+      featureName: "Risk Level Confirmation",
+      requirement: "Confirm the final risk level based on the previous assessment steps. Proceed to 'Governance Approval' for High Risk, or 'Internal Approval' for Low/Medium Risk.",
+      description: "Select the appropriate approval workflow matching the risk classification."
+    }
+  ],
   "risk-plan-approval": [
     {
       featureName: "Plan Approval",
@@ -671,6 +692,13 @@ const EN: StepRequirements = {
         "For high-impact AI services, allow review or re-performance of existing impact assessment results when necessary, and register and manage results in the system.",
       description: "To reconfirm impact in light of service changes or verification results",
     },
+  ],
+  "verification-branch": [
+    {
+      featureName: "Verification Branching",
+      requirement: "Determine the need for additional verification based on pre-op results. Proceed to 'Third-party Verification' for High Risk, or 'Verification Adequacy' check for others.",
+      description: "Select the subsequent verification procedure according to risk/verification results."
+    }
   ],
   "verification-adequacy": [
     {
